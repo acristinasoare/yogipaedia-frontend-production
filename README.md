@@ -4,8 +4,7 @@
 
 - Cristina Soare
 - Louise Osborne
-
-* Holly Mathieson
+- Holly Mathieson
 
 ### `npm start`
 
