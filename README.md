@@ -2,9 +2,9 @@
 
 ## Engineers
 
-- Cristina Soare - Components Manager
+- Cristina Soare - Frontend/Components Manager
 - Louise Osborne - Backend Manager
-- Holly Mathieson - SASS Manager
+- Holly Mathieson - Frontend/SASS Manager
 
 ## Conventions
 Variable/Naming conventions here
