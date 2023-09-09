@@ -2,10 +2,12 @@
 
 ## Engineers
 
-- Cristina Soare
-- Louise Osborne
+- Cristina Soare - Components Manager
+- Louise Osborne - Backend Manager
+- Holly Mathieson - SASS Manager
 
-* Holly Mathieson
+## Conventions
+Variable/Naming conventions here
 
 ### `npm start`
 
@@ -19,3 +21,5 @@ Launches the test runner in the interactive watch mode.
 ### `npm run build`
 
 Builds the app for production to the `build` folder.
+
+
