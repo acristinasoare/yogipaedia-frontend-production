@@ -1,49 +1,44 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
+import { Container, Row, Col } from "react-bootstrap";
+import { Routes, Route } from "react-router-dom";
+
+import ProtectedRoute from "../components/ProtectedRoute";
+import { UserAuthContextProvider } from "../context/UserAuthContext";
+
 import LoginModal from "./LoginModal";
 import SignUp from "./SignUp";
-import { auth } from "../config/firebase";
-import TopNavBar from "./TopNavBar";
+import Home from "./Home";
+import PoseOfTheDay from "./PoseOfTheDay";
 import PosesLibrary from "./PosesLibrary";
 import MyFavourites from "./MyFavourites";
-import PoseOfTheDay from "./PoseOfTheDay";
 
 import "../styles/app.scss";
 
 const App = () => {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    onAuthStateChanged(auth, (firebaseUser) => {
-      if (firebaseUser) {
-        setUser(firebaseUser);
-      } else {
-        setUser(null);
-      }
-    });
-  }, []);
-
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <header className="App-header">
-          <h1>YOGIPEDIA</h1>
-        </header>
-      </div>
-      <TopNavBar />
-      <Routes>
-        <Route path="/login" element={<LoginModal onSetUser={setUser} />} />
-        <Route
-          path="/create-account"
-          element={<SignUp onSetUser={setUser} />}
-        />
-        <Route path="/" element={<PoseOfTheDay />} />
-        <Route path="/poses-library" element={<PosesLibrary />} />
-        <Route path="/my-favourites" element={<MyFavourites />} />
-      </Routes>
-    </BrowserRouter>
-  );
+	return (
+		<Container style={{ width: "400px" }}>
+			<Row>
+				<Col>
+					<UserAuthContextProvider>
+						<Routes>
+							<Route
+								path="/home"
+								element={
+									<ProtectedRoute>
+										<Home />
+									</ProtectedRoute>
+								}
+							/>
+							<Route path="/" element={<LoginModal />} />
+							<Route path="/signup" element={<SignUp />} />
+							<Route path="/home" element={<PoseOfTheDay />} />
+							<Route path="/poses-library" element={<PosesLibrary />} />
+							<Route path="/my-favourites" element={<MyFavourites />} />
+						</Routes>
+					</UserAuthContextProvider>
+				</Col>
+			</Row>
+		</Container>
+	);
 };
 
 export default App;
