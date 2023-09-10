@@ -5,7 +5,9 @@ import LoginModal from "./LoginModal";
 import SignUp from "./SignUp";
 import { auth } from "../config/firebase";
 import TopNavBar from "./TopNavBar";
+import PosesLibrary from "./PosesLibrary";
 import MyFavourites from "./MyFavourites";
+import PoseOfTheDay from "./PoseOfTheDay";
 
 import "../styles/app.scss";
 
@@ -29,14 +31,16 @@ const App = () => {
           <h1>YOGIPEDIA</h1>
         </header>
       </div>
+      <TopNavBar />
       <Routes>
         <Route path="/login" element={<LoginModal onSetUser={setUser} />} />
         <Route
           path="/create-account"
           element={<SignUp onSetUser={setUser} />}
         />
-        <Route path="/" element={<TopNavBar />} />
-        <Route path="/MyFavourites" element={<MyFavourites />} />
+        <Route path="/" element={<PoseOfTheDay />} />
+        <Route path="/poses-library" element={<PosesLibrary />} />
+        <Route path="/my-favourites" element={<MyFavourites />} />
       </Routes>
     </BrowserRouter>
   );
