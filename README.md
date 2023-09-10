@@ -7,7 +7,9 @@
 - Holly Mathieson - Frontend/SASS Manager
 
 ## Conventions
-Variable/Naming conventions here
+
+Testing: MyComponent.test.js Components: MyComponent.js Styles:
+my-component.scss
 
 ## Running Instructions
 
@@ -23,5 +25,3 @@ Launches the test runner in the interactive watch mode.
 ### `npm run build`
 
 Builds the app for production to the `build` folder.
-
-
