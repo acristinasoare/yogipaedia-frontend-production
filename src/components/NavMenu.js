@@ -25,7 +25,7 @@ const NavMenu = () => {
 
   return (
     <div className="dropdown" onClick={handleDropdown}>
-      <span cassName="dropdown-menu">
+      <span className="dropdown-menu">
         My Account <FontAwesomeIcon icon={faBars} />
       </span>
       {dropdownOpen && (
