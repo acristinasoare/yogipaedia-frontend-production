@@ -3,15 +3,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/top-nav-bar.scss";
-import SearchBox from "./SearchBox";
 import NavMenu from "./NavMenu";
 
 const TopNavBar = () => {
   return (
     <nav className="navbar-container">
-      <SearchBox />
-      <Link to="/">HOME</Link>
-      <NavMenu />
+      <div>
+        <Link to="/poses-library">Poses Library</Link>
+      </div>
+      <div>
+        <Link to="/">HOME</Link>
+      </div>
+      <div>
+        <NavMenu />
+      </div>
     </nav>
     //home to be replaced with logo
   );

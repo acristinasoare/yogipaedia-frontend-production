@@ -5,7 +5,7 @@ import React from "react";
 import "../styles/pose-of-the-day.scss";
 
 const PoseOfTheDay = () => {
-	// logic goes here
+  return <div>Pose Of The Day</div>;
 };
 
 export default PoseOfTheDay;
