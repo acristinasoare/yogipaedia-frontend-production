@@ -1,6 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
-
 import ProtectedRoute from "../components/ProtectedRoute";
 import { UserAuthContextProvider } from "../context/UserAuthContext";
 
@@ -15,9 +13,6 @@ import "../styles/app.scss";
 
 const App = () => {
 	return (
-		// <Container style={{ width: "100%" }}>
-		// 	<Row>
-		// 		<Col>
 		<>
 			<UserAuthContextProvider>
 				<Routes>
@@ -36,9 +31,6 @@ const App = () => {
 					<Route path="/my-favourites" element={<MyFavourites />} />
 				</Routes>
 			</UserAuthContextProvider>
-			{/* // 		</Col> */}
-			{/* // 	</Row> */}
-			{/* // </Container> */}
 		</>
 	);
 };
