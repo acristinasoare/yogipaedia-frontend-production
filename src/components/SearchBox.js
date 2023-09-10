@@ -2,9 +2,20 @@
 // Includes a submit button
 
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/search-box.scss";
 
-const SearchBox = () => {};
+const SearchBox = () => {
+  return (
+    <form>
+      <input type="text" placeholder="Search here..." />
+      <button type="submit">
+        <FontAwesomeIcon icon={faMagnifyingGlass} />
+      </button>
+    </form>
+  );
+};
 
 export default SearchBox;
