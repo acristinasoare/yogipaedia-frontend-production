@@ -4,22 +4,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/top-nav-bar.scss";
 import NavMenu from "./NavMenu";
+import LogOut from "../components/LogOut";
 
 const TopNavBar = () => {
-  return (
-    <nav className="navbar-container">
-      <div>
-        <Link to="/poses-library">Poses Library</Link>
-      </div>
-      <div>
-        <Link to="/">HOME</Link>
-      </div>
-      <div>
-        <NavMenu />
-      </div>
-    </nav>
-    //home to be replaced with logo
-  );
+	return (
+		<nav className="navbar-container">
+			<div>
+				<Link to="/poses-library">Poses Library</Link>
+			</div>
+			<div>
+				<Link to="/">HOME</Link>
+			</div>
+			<div>
+				<LogOut />
+			</div>
+		</nav>
+		//home to be replaced with logo
+	);
 };
 
 export default TopNavBar;
