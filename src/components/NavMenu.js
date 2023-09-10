@@ -12,6 +12,16 @@ const NavMenu = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
+  const handleLogOut = () => {
+    // logic for handling log out
+    //should redirect user to log in page
+  };
+
+  const handleDelete = () => {
+    //logic for handling delete account
+    //should redirect user to log in page
+  };
+
   return (
     <div className="dropdown" onClick={handleDropdown}>
       <span cassName="dropdown-menu">
@@ -19,12 +29,24 @@ const NavMenu = () => {
       </span>
       {dropdownOpen && (
         <div className="dropdown-content">
-          <Link to="/myfavoruites">My Favourites</Link>
-          <div>Logout</div>
-          <div>Delete my account</div>
+          <ul>
+            <li>
+              <Link to="/myfavoruites">My Favourites</Link>
+            </li>
+            <li>
+              <button onClick={handleLogOut}>Logout</button>
+            </li>
+            <li>
+              <button onClick={handleDelete}>Delete my account</button>
+            </li>
+          </ul>
         </div>
       )}
     </div>
+
+    //logout and delete account have to be buttons to be able to add logic for loging out/deleting account
+    //Holly you can add styling so the buttons have no margins
+    // and  background color is the same as the dropdown so it looks like a normal link rather than a button
   );
 };
 
