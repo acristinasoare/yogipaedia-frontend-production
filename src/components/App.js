@@ -15,29 +15,31 @@ import "../styles/app.scss";
 
 const App = () => {
 	return (
-		<Container style={{ width: "400px" }}>
-			<Row>
-				<Col>
-					<UserAuthContextProvider>
-						<Routes>
-							<Route
-								path="/home"
-								element={
-									<ProtectedRoute>
-										<Home />
-									</ProtectedRoute>
-								}
-							/>
-							<Route path="/" element={<LoginModal />} />
-							<Route path="/signup" element={<SignUp />} />
-							<Route path="/home" element={<PoseOfTheDay />} />
-							<Route path="/poses-library" element={<PosesLibrary />} />
-							<Route path="/my-favourites" element={<MyFavourites />} />
-						</Routes>
-					</UserAuthContextProvider>
-				</Col>
-			</Row>
-		</Container>
+		// <Container style={{ width: "100%" }}>
+		// 	<Row>
+		// 		<Col>
+		<>
+			<UserAuthContextProvider>
+				<Routes>
+					<Route
+						path="/home"
+						element={
+							<ProtectedRoute>
+								<Home />
+							</ProtectedRoute>
+						}
+					/>
+					<Route path="/" element={<LoginModal />} />
+					<Route path="/signup" element={<SignUp />} />
+					<Route path="/home" element={<PoseOfTheDay />} />
+					<Route path="/poses-library" element={<PosesLibrary />} />
+					<Route path="/my-favourites" element={<MyFavourites />} />
+				</Routes>
+			</UserAuthContextProvider>
+			{/* // 		</Col> */}
+			{/* // 	</Row> */}
+			{/* // </Container> */}
+		</>
 	);
 };
 

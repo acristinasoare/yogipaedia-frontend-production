@@ -1,5 +1,7 @@
+@import "../variables/variables.scss";
+
 body {
-	background-color: #fafafa;
+	background-color: $white;
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -9,8 +11,8 @@ body {
 }
 
 .box {
-	border: 1px solid #dfdfdf;
-	background-color: #fff;
+	border: 1px solid $blue;
+	background-color: $blue;
 }
 
 .g-btn {
