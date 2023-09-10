@@ -8,7 +8,8 @@
 
 ## Conventions
 
-Variable/Naming conventions here
+Testing: MyComponent.test.js Components: MyComponent.js Styles:
+my-component.scss
 
 ## Running Instructions
 
