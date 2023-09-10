@@ -1,4 +1,4 @@
-# YOGIPEDIA
+# Yogipedia - A Yoga App - Frontend Repository
 
 ## Engineers
 
