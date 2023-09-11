@@ -1,6 +1,7 @@
 import React from "react";
 
 import TopNavBar from "./TopNavBar";
+import PoseOfTheDay from "./PoseOfTheDay";
 
 const Home = () => {
 	return (
@@ -10,6 +11,7 @@ const Home = () => {
 				<h1>yogipedia</h1>
 			</div>
 			<TopNavBar />
+			<PoseOfTheDay />
 		</>
 	);
 };
