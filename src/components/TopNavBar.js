@@ -3,7 +3,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/top-nav-bar.scss";
-
 import LogOut from "../components/LogOut";
 
 const TopNavBar = () => {
