@@ -12,6 +12,11 @@ const TopNavBar = () => {
 				<Link to="/poses-library">poses library</Link>
 			</div>
 			<div>
+				<a className="navbar-container--logo__link" href="/home">
+					<img src="../assets/logo-pink.png" />
+				</a>
+			</div>
+			<div>
 				<Link to="/home">home</Link>
 			</div>
 			<div>
