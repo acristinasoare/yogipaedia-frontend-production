@@ -15,7 +15,7 @@ const TopNavBar = () => {
 			</div>
 			<div>
 				<a className="navbar-container--logo__link" href="/home">
-					<img src="../../assets/logo-pink.png" />
+					<img src="./../../public/assets/Yogipedia.png" />
 				</a>
 			</div>
 			<NavMenu />

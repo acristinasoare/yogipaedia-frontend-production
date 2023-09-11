@@ -25,10 +25,10 @@ const NavMenu = () => {
 
 	return (
 		<div className="dropdown" onClick={handleDropdown}>
-			<button className="dropdown-menu">
+			<span className="dropdown-menu">
 				My Account
 				<FontAwesomeIcon icon={faBars} />
-			</button>
+			</span>
 			{dropdownOpen && (
 				<div className="dropdown-content">
 					<ul>
