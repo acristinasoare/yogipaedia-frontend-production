@@ -3,17 +3,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/top-nav-bar.scss";
-import NavMenu from "./NavMenu";
+
 import LogOut from "../components/LogOut";
 
 const TopNavBar = () => {
 	return (
 		<nav className="navbar-container">
 			<div>
-				<Link to="/poses-library">Poses Library</Link>
+				<Link to="/poses-library">poses library</Link>
 			</div>
 			<div>
-				<Link to="/">HOME</Link>
+				<Link to="/home">home</Link>
 			</div>
 			<div>
 				<LogOut />
