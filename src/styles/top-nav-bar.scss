@@ -6,15 +6,22 @@
 	text-decoration: none;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
+	box-shadow: none;
 	a {
-		// width: 100px;
-		// height: 100px;
 		background-image: url("../../public/assets/logo-pink.png");
 		display: inline-block;
+		box-shadow: none;
+		border-style: none;
+		.navbar-container--logo__link {
+			color: $white;
+		}
 	}
 	img {
 		width: 200px;
 		height: 200px;
+		box-shadow: none;
+		color: $white;
+		border-style: none;
 	}
 }

@@ -25,14 +25,15 @@ const NavMenu = () => {
 
 	return (
 		<div className="dropdown" onClick={handleDropdown}>
-			<span className="dropdown-menu">
-				My Account <FontAwesomeIcon icon={faBars} />
-			</span>
+			<button className="dropdown-menu">
+				My Account
+				<FontAwesomeIcon icon={faBars} />
+			</button>
 			{dropdownOpen && (
 				<div className="dropdown-content">
 					<ul>
 						<li>
-							<Link to="/myfavourites">My Favourites</Link>
+							<Link to="/my-favourites">My Favourites</Link>
 						</li>
 						<li>
 							<button onClick={handleLogOut}>Logout</button>
