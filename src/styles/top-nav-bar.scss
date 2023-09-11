@@ -9,19 +9,15 @@
 	justify-content: space-around;
 	box-shadow: none;
 	a {
-		// background-image: url("./../../public/assets/Yogipedia.png");
 		display: inline-block;
 		box-shadow: none;
 		border-style: none;
-		.navbar-container--logo__link {
-			color: $white;
-		}
 	}
-	img {
-		width: 200px;
-		height: 200px;
-		box-shadow: none;
-		color: $white;
-		border-style: none;
-	}
+	// img {
+	// 	width: 200px;
+	// 	height: 200px;
+	// 	box-shadow: none;
+	// 	color: $white;
+	// 	border-style: none;
+	// }
 }

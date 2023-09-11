@@ -6,6 +6,7 @@ import "../styles/top-nav-bar.scss";
 import PosesLibrary from "./PosesLibrary";
 import MyAccount from "./MyAccount";
 import NavMenu from "./NavMenu";
+import "./Yogipedia.png";
 
 const TopNavBar = () => {
 	return (
@@ -15,7 +16,7 @@ const TopNavBar = () => {
 			</div>
 			<div>
 				<a className="navbar-container--logo__link" href="/home">
-					<img src="./../../public/assets/Yogipedia.png" />
+					<img src="./Yogipedia.png" />
 				</a>
 			</div>
 			<NavMenu />
