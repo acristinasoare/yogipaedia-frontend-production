@@ -1,6 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router";
-import { useUserAuth } from "../context/UserAuthContext";
 
 import TopNavBar from "./TopNavBar";
 
@@ -9,7 +7,7 @@ const Home = () => {
 		<>
 			<div className="App">
 				<header className="App-header" />
-				<h1>YOGIPEDIA</h1>
+				<h1>yogipedia</h1>
 			</div>
 			<TopNavBar />
 		</>

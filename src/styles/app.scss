@@ -10,6 +10,13 @@ body {
 	height: 100vh;
 }
 
+h1 {
+	color: $pink;
+	font-family: $noto-sans;
+	font-size: 80px;
+	font-weight: 600;
+}
+
 .box {
 	border: 1px solid $blue;
 	background-color: $blue;
