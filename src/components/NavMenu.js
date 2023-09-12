@@ -5,7 +5,6 @@ import "../styles/nav-menu.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
 
-import LogOut from "./LogOut";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -34,9 +33,9 @@ const NavMenu = () => {
 			<label onClick={handleDropdown}>
 				My account
 				{/* this icon doesn't render at the moment, so I'm commenting it out until we've solved the dropdown issue*/}
-				{/* <span className="dropdown-menu" onClick={handleDropdown}>
+				<span className="dropdown-menu" onClick={handleDropdown}>
 					<FontAwesomeIcon icon={faBars} />
-				</span> */}
+				</span>
 				{dropdownOpen && (
 					<div className="dropdown-content">
 						<ul>
