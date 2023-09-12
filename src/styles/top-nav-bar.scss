@@ -6,7 +6,8 @@
 	text-decoration: none;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
+	align-items: center;
 	box-shadow: none;
 	a {
 		display: inline-block;
@@ -14,8 +15,8 @@
 		border-style: none;
 	}
 	img {
-		width: 200px;
-		height: 200px;
+		width: 250px;
+		height: 250px;
 		box-shadow: none;
 		color: $white;
 		border-style: none;

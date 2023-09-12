@@ -1,6 +1,9 @@
 @import "../variables/variables.scss";
 
 body {
+	padding-top: 100px;
+	padding-left: 80px;
+	padding-right: 80px;
 	background-color: $white;
 	display: flex;
 	justify-content: center;
