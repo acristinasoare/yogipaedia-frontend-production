@@ -63,15 +63,19 @@ const NavMenu = () => {
 							<li>
 								<Link to="/my-favourites">My Favourites</Link>
 							</li>
-							{/* the dropdown functionality works fine with the remaining buttons commented out. When they're uncommented, 
-							the handleLogOut takes over onClick, and we lose access to handleDropdown */}
 
-							{/* <li>
-								<button onClick={handleLogOut}>Logout</button>
+							{/* The following needs the handleLogOut and handleDelete worked out, as the user stays logged in */}
+
+							<li>
+								<Link to="/" onClick={handleLogOut}>
+									Logout
+								</Link>
 							</li>
 							<li>
-								<button onClick={handleDelete}>Delete my account</button>
-							</li> */}
+								<Link to="/" onClick={handleDelete}>
+									Delete my account
+								</Link>
+							</li>
 						</ul>
 					</div>
 				)}
