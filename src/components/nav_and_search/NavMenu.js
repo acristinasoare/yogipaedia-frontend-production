@@ -38,7 +38,7 @@ const NavMenu = () => {
 				{/* <span className="dropdown-menu" onClick={handleDropdown}>
 					<FontAwesomeIcon icon={faBars} />
 				</span> */}
-				<img className="fa fa-bars" src="./ci_hamburger-md.png" />
+				<img className="fa fa-bars" src="ci_hamburger-md.png" />
 				{dropdownOpen && (
 					<div className="dropdown-content">
 						<ul>

@@ -8,6 +8,7 @@ import Home from "./Home";
 import PoseOfTheDay from "./PoseOfTheDay";
 import PosesLibrary from "./PosesLibrary";
 import MyFavourites from "../user_account/MyFavourites";
+import TopNavBar from "../nav_and_search/TopNavBar";
 
 import "../../styles/app_static_sass/app.scss";
 
@@ -15,6 +16,7 @@ const App = () => {
 	return (
 		<>
 			<UserAuthContextProvider>
+				<TopNavBar />
 				<Routes>
 					<Route
 						path="/home"

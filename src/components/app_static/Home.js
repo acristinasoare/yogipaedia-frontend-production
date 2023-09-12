@@ -8,7 +8,6 @@ const Home = () => {
 	return (
 		<>
 			<div className="App">
-				<TopNavBar />
 				<PoseOfTheDay />
 			</div>
 		</>
