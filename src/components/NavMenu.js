@@ -1,38 +1,16 @@
 // hamburger icon that acts as a dropdown button, with links to MyPoses, MyFlows, LogOut
 
-// import React from "react";
-// import { Link, useNavigate } from "react-router-dom";
-
-// const App = () => {
-// 	const [food, setFood] = React.useState("");
-
-// 	const handleFoodChange = (event) => {
-// 		setFood(event.target.value);
-// 	};
-
-// 	return (
-// 		<div>
-// 			<label>
-// 				My Account
-// 				<select value={food} onChange={handleFoodChange}>
-// 					<option value="apple">Apple</option>
-// 					<option value="banana">Banana</option>
-// 					<option value="orange">Orange</option>
-// 				</select>
-// 			</label>
-// 		</div>
-// 	);
-// };
-
-// export default App;
-
 import React, { useState } from "react";
 import "../styles/nav-menu.scss";
 import { Link, useNavigate } from "react-router-dom";
+import { useUserAuth } from "../context/UserAuthContext";
+
+import LogOut from "./LogOut";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const NavMenu = () => {
+	const { logOut, unsubscribe } = useUserAuth();
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const handleDropdown = () => {
 		setDropdownOpen(!dropdownOpen);
@@ -40,12 +18,14 @@ const NavMenu = () => {
 	const navigate = useNavigate();
 
 	const handleLogOut = () => {
-		// logic for handling log out and clearing user session to be inserted
-		navigate("/"); // redirects user to log in page
+		// logic for handling log out and clearing user session to be inserted. check context/UserAuthContext.js for clues. All covered by firebase.
+		logOut();
+		navigate("/"); //redirects user to log in page
 	};
 
 	const handleDelete = () => {
-		//logic for handling delete account to be inserted
+		unsubscribe();
+		//logic for handling delete account to be inserted. check context/UserAuthContext.js for clues. All covered by firebase.
 		navigate("/"); //redirects user to log in page
 	};
 
@@ -64,11 +44,9 @@ const NavMenu = () => {
 								<Link to="/my-favourites">My Favourites</Link>
 							</li>
 
-							{/* The following needs the handleLogOut and handleDelete worked out, as the user stays logged in */}
-
 							<li>
 								<Link to="/" onClick={handleLogOut}>
-									Logout
+									Log out
 								</Link>
 							</li>
 							<li>
