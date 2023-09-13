@@ -1,17 +1,18 @@
 @import "../../variables/variables.scss";
 
 .navbar-container {
-	font-family: $noto-sans;
-	font-size: 50px;
-	text-decoration: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	box-shadow: none;
-	a {
-		display: inline-block;
-		box-shadow: none;
-		border-style: none;
-	}
+  font-family: $noto-sans;
+  font-size: 50px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: none;
+  a {
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: none;
+    border-style: none;
+  }
 }
