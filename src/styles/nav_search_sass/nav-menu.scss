@@ -1,7 +1,11 @@
 @import "../../variables/variables.scss";
 .fa.fa-bars {
-	width: 100px;
-	height: 100px;
-	box-shadow: none;
-	border-style: none;
+  width: 100px;
+  height: 100px;
+  box-shadow: none;
+  border-style: none;
+}
+
+li {
+  list-style-type: none;
 }
