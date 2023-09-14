@@ -8,19 +8,19 @@ import MyAccount from "../user_account/MyAccount";
 import NavMenu from "./NavMenu";
 
 const TopNavBar = () => {
-	return (
-		<nav className="navbar-container">
-			<div>
-				<Link to="/poses-library">Poses Library</Link>
-			</div>
-			<div>
-				<a className="navbar-container--logo__link" href="/home">
-					<img src="Yogipedia.png" />
-				</a>
-			</div>
-			<NavMenu />
-		</nav>
-	);
+  return (
+    <nav className="navbar-container">
+      <div>
+        <Link to="/poses-library">Poses Library</Link>
+      </div>
+      <div>
+        <a className="navbar-container--logo__link" href="/home">
+          <img src="Yogipedia-logo.png" alt="yogipedia-logo" />
+        </a>
+      </div>
+      <NavMenu />
+    </nav>
+  );
 };
 
 export default TopNavBar;
