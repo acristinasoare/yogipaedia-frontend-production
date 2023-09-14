@@ -2,17 +2,26 @@
 
 .navbar-container {
   font-family: $noto-sans;
-  font-size: 50px;
   text-decoration: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   box-shadow: none;
+  margin-top: 5px;
+  font-size: 20px;
+
   a {
+    margin-top: auto;
     text-decoration: none;
     display: inline-block;
     box-shadow: none;
     border-style: none;
+    color: black;
+
+    img {
+      width: 120px;
+      height: auto;
+    }
   }
 }
