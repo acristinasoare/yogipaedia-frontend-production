@@ -1,16 +1,18 @@
 @import "../../variables/variables.scss";
 
 body {
-	padding-top: 100px;
-	padding-left: 80px;
+	margin-top: 50px;
+	margin-left: 80px;
 	padding-right: 80px;
 	background-color: $background;
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	width: 100%;
+	overflow: visible;
+	width: vw;
+	height: vh;
 	align-items: center;
-	height: 100vh;
+	min-height: 100vh;
 }
 
 h1 {
@@ -25,16 +27,16 @@ h1 {
 	background-color: $accent-one-light;
 }
 
-.btn-primary {
-	background-color: $dark-text;
-	border-color: $dark-text;
-	&:hover {
-		background-color: $dark-text;
-		border-color: $dark-text;
-		opacity: 70%;
-		transition: 500ms;
-	}
-}
+// .btn-primary {
+// 	background-color: $dark-text;
+// 	border-color: $dark-text;
+// 	&:hover {
+// 		background-color: $dark-text;
+// 		border-color: $dark-text;
+// 		opacity: 70%;
+// 		transition: 500ms;
+// 	}
+// }
 
 .g-btn {
 	font-family: $noto-sans;
@@ -53,10 +55,7 @@ h1 {
 	box-shadow: none;
 }
 
-a {
-	color: $accent-two-dark;
-	&:hover {
-		color: $accent-two-light;
-		transition: 500ms;
-	}
+.page-content--container {
+	margin-top: 250px;
+	min-height: vh;
 }

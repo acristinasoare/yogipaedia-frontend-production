@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,700;1,700&display=swap");
+@import "normalize.css/normalize.css";
+@import "../src/variables/variables.scss";
 
 body {
-	margin: 0;
 	font-family: -apple-system, "Noto Sans", BlinkMacSystemFont, "Segoe UI",
 		"Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
 		"Helvetica Neue", sans-serif;
@@ -12,4 +13,12 @@ body {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
+}
+
+:root a {
+	color: $accent-two-dark;
+	&:hover {
+		color: black;
+		transition: 500ms;
+	}
 }

@@ -8,9 +8,11 @@ const MyFavourites = () => {
 	return (
 		<div>
 			<TopNavBar />
-			<div>My Favourites Page</div>
-			<MyFlows />
-			<MyPoses />
+			<div className="page-content--container">
+				<div>My Favourites Page</div>
+				<MyFlows />
+				<MyPoses />
+			</div>
 		</div>
 	);
 };

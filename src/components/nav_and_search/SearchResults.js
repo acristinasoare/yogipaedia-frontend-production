@@ -4,6 +4,8 @@ import React from "react";
 
 import "../styles/search-results.scss";
 
-const SearchResults = () => {};
+const SearchResults = () => {
+	// add className page-content--container
+};
 
 export default SearchResults;

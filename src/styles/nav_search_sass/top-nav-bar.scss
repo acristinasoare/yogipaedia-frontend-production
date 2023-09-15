@@ -1,27 +1,30 @@
 @import "../../variables/variables.scss";
 
 .navbar-container {
-  font-family: $noto-sans;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  box-shadow: none;
-  margin-top: 5px;
-  font-size: 20px;
+	overflow: visible;
+	position: fixed;
+	background-color: $background;
+	top: 0;
+	width: 90%;
+	font-family: $noto-sans;
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+	font-size: 20px;
 
-  a {
-    margin-top: auto;
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: none;
-    border-style: none;
-    color: black;
+	a {
+		margin-top: auto;
+		text-decoration: none;
+		display: inline-block;
+		box-shadow: none;
+		border-style: none;
+		color: black;
 
-    img {
-      width: 120px;
-      height: auto;
-    }
-  }
+		img {
+			width: 200px;
+			height: auto;
+		}
+	}
 }

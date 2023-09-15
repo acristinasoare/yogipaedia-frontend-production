@@ -7,9 +7,6 @@ import { useUserAuth } from "../../context/UserAuthContext";
 
 import "./ci_hamburger-md.png";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-
 const NavMenu = () => {
 	const { logOut, unsubscribe } = useUserAuth();
 	const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -32,40 +29,38 @@ const NavMenu = () => {
 
 	return (
 		<div className="dropdown">
-			<label onClick={handleDropdown}>
-				<div className="dropdown-btn">
-					{/* <div className="my-account-label">My account</div> */}
-					{/* this icon doesn't render at the moment, so I'm commenting it out until we've solved the dropdown issue*/}
-					{/* <span className="dropdown-menu" onClick={handleDropdown}>
+			<div className="dropdown--btn" onClick={handleDropdown}>
+				{/* <div className="my-account-label">My account</div> */}
+				{/* this icon doesn't render at the moment, so I'm commenting it out until we've solved the dropdown issue*/}
+				{/* <span className="dropdown-menu" onClick={handleDropdown}>
 					<FontAwesomeIcon icon={faBars} />
 				</span> */}
-					<img
-						className="fa fa-bars"
-						src="ci_hamburger-md.png"
-						alt="hamburger-menu"
-					/>
-				</div>
-				{dropdownOpen && (
-					<div className="dropdown-content">
-						<ul>
-							<li>
-								<Link to="/my-favourites">My Favourites</Link>
-							</li>
+				<img
+					className="dropdown--hamburger-icon"
+					src="ci_hamburger-md.png"
+					alt="hamburger-menu"
+				/>
+			</div>
+			{dropdownOpen && (
+				<div className="dropdown--content">
+					<ul>
+						<li className="dropdown--content__item">
+							<Link to="/my-favourites">My Favourites</Link>
+						</li>
 
-							<li>
-								<Link to="/" onClick={handleLogOut}>
-									Log out
-								</Link>
-							</li>
-							<li>
-								<Link to="/" onClick={handleDelete}>
-									Delete my account
-								</Link>
-							</li>
-						</ul>
-					</div>
-				)}
-			</label>
+						<li className="dropdown--content__item">
+							<Link to="/" onClick={handleLogOut}>
+								Log out
+							</Link>
+						</li>
+						<li className="dropdown--content__item">
+							<Link to="/" onClick={handleDelete}>
+								Delete my account
+							</Link>
+						</li>
+					</ul>
+				</div>
+			)}
 		</div>
 
 		//logout and delete account have to be buttons to be able to add logic for loging out/deleting account
