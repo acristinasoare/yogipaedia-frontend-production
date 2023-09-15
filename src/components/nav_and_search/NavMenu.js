@@ -30,11 +30,7 @@ const NavMenu = () => {
 	return (
 		<div className="dropdown">
 			<div className="dropdown--btn" onClick={handleDropdown}>
-				{/* <div className="my-account-label">My account</div> */}
-				{/* this icon doesn't render at the moment, so I'm commenting it out until we've solved the dropdown issue*/}
-				{/* <span className="dropdown-menu" onClick={handleDropdown}>
-					<FontAwesomeIcon icon={faBars} />
-				</span> */}
+				<span className="my-account">My account</span>
 				<img
 					className="dropdown--hamburger-icon"
 					src="ci_hamburger-md.png"
