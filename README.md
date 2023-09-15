@@ -10,13 +10,14 @@
 
 ### naming
 
-Testing: MyComponent.test.js Components: MyComponent.js Styles:
-my-component.scss
+- Testing: MyComponent.test.js
+- Components: MyComponent.js
+- Styles: my-component.scss\*
 
 ### classNames
 
-BLOCK**ELEMENT--MODIFIER (without hyphenated items)
-BLOCK-ITEM**ELEMENT--SECONDARY-MODIFIER (with hyphenated items)
+- BLOCK\_\_ELEMENT--MODIFIER (without hyphenated items)
+- BLOCK-ITEM\_\_ELEMENT--SECONDARY-MODIFIER (with hyphenated items)
 
 ## Running Instructions
 
