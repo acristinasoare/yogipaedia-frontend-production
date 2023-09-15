@@ -1,26 +1,34 @@
 @import "../../variables/variables.scss";
 
 .dropdown {
-  position: relative;
+	position: relative;
+	display: flex;
+	width: 200px;
+}
+
+.dropdown-btn {
+	//
 }
 
 .fa.fa-bars {
-  width: 100px;
-  height: 100px;
-  box-shadow: none;
-  border-style: none;
+	width: 30px;
+	height: auto;
+	box-shadow: none;
+	border-style: none;
 }
 
 li {
-  list-style-type: none;
+	list-style-type: none;
+	color: $dark-text;
+	width: 100%;
+	&:hover {
+		color: $accent-two-dark;
+		transition: 500ms;
+	}
 }
 
 .dropdown-content {
-  position: absolute;
-  background-color: white;
-}
-
-.fa.fa-bars {
-  width: 30px;
-  height: auto;
+	position: absolute;
+	background-color: white;
+	width: 100%;
 }

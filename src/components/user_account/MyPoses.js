@@ -3,7 +3,7 @@
 
 import React from "react";
 
-import "../styles/my-poses.scss";
+import "../../styles/user_account_sass/my-poses.scss";
 
 const MyPoses = () => {
 	// logic goes here

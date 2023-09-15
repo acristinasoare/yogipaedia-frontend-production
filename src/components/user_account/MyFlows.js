@@ -3,7 +3,7 @@
 
 import React from "react";
 
-import "../styles/my-flows.scss";
+import "../../styles/user_account_sass/my-flows.scss";
 
 const MyFlows = () => {
 	// logic goes here
