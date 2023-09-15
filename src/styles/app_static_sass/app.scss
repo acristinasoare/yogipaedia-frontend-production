@@ -1,9 +1,6 @@
 @import "../../variables/variables.scss";
 
 body {
-	margin-top: 50px;
-	margin-left: 80px;
-	padding-right: 80px;
 	background-color: $background;
 	display: flex;
 	justify-content: center;
@@ -16,7 +13,7 @@ body {
 }
 
 h1 {
-	color: $dark-text;
+	color: $accent-one-dark;
 	font-family: $noto-sans;
 	font-size: 80px;
 	font-weight: 600;
@@ -57,6 +54,8 @@ h1 {
 
 .page-content--container {
 	margin-top: 250px;
+	margin-left: 40px;
+	margin-right: 40px;
 	min-height: vh;
 	width: vw;
 }

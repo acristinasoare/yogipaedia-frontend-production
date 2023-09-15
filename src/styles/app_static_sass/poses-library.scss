@@ -1,9 +1,12 @@
 @import "../../variables/variables.scss";
 
-.page-content--container {
-	margin-top: 250px;
-	min-height: vh;
-}
+// I don't think we need this, as
+// the global .page-content--container does the same thing
+// .poses-library {
+// 	margin-top: 300px;
+// 	overflow-y: scroll;
+// }
+
 .poses-container {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);

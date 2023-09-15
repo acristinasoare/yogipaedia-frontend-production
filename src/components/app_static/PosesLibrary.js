@@ -24,14 +24,16 @@ const PosesLibrary = () => {
 		<div>
 			<TopNavBar />
 			<div className="page-content--container">
-				<div className="poses-container">
-					{poses.map((pose, index) => (
-						<div className="grid-item" key={index}>
-							<button class="pose-button" onClick={handleClick}>
-								<img src={pose} alt="yoga-pose" />
-							</button>
-						</div>
-					))}
+				<div className="poses-library">
+					<div className="poses-container">
+						{poses.map((pose, index) => (
+							<div className="grid-item" key={index}>
+								<button class="pose-button" onClick={handleClick}>
+									<img src={pose} alt="yoga-pose" />
+								</button>
+							</div>
+						))}
+					</div>
 				</div>
 			</div>
 		</div>
