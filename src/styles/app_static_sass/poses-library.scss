@@ -1,11 +1,9 @@
 @import "../../variables/variables.scss";
 
-// I don't think we need this, as
-// the global .page-content--container does the same thing
-// .poses-library {
-// 	margin-top: 300px;
-// 	overflow-y: scroll;
-// }
+.poses-library {
+	margin-top: 300px;
+	overflow-y: scroll;
+}
 
 .poses-container {
 	display: grid;
