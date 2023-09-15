@@ -9,7 +9,9 @@ const Home = () => {
 		<>
 			<div className="App">
 				<TopNavBar />
-				<PoseOfTheDay />
+				<div className="page-content--container">
+					<PoseOfTheDay />
+				</div>
 			</div>
 		</>
 	);

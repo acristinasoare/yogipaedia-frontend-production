@@ -3,8 +3,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/nav_search_sass/top-nav-bar.scss";
-import PosesLibrary from "../app_static/PosesLibrary";
-import MyAccount from "../user_account/MyAccount";
+// import PosesLibrary from "../app_static/PosesLibrary";
+// import MyAccount from "../user_account/MyAccount";
 import NavMenu from "./NavMenu";
 
 const TopNavBar = () => {
