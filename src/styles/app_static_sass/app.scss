@@ -27,16 +27,16 @@ h1 {
 	background-color: $accent-one-light;
 }
 
-// .btn-primary {
-// 	background-color: $dark-text;
-// 	border-color: $dark-text;
-// 	&:hover {
-// 		background-color: $dark-text;
-// 		border-color: $dark-text;
-// 		opacity: 70%;
-// 		transition: 500ms;
-// 	}
-// }
+.btn-primary {
+	background-color: $dark-text;
+	border-color: $dark-text;
+	&:hover {
+		background-color: $dark-text;
+		border-color: $dark-text;
+		opacity: 70%;
+		transition: 500ms;
+	}
+}
 
 .g-btn {
 	font-family: $noto-sans;
