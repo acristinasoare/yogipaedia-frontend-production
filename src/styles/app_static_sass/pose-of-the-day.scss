@@ -8,7 +8,7 @@
 	background-color: #e4e4e2;
 }
 
-.pose-container {
+.pose__container {
 	display: flex;
 	align-items: center;
 	padding: 20px 135px;
@@ -25,7 +25,7 @@
 	padding-right: 20px;
 }
 
-.pose-image {
+.pose__image {
 	flex: 1;
 
 	img {
@@ -34,7 +34,7 @@
 	}
 }
 
-.description-container {
+.pose-description__container {
 	margin: 20px 300px;
 	color: black;
 	text-align: justify;

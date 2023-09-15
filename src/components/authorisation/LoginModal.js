@@ -78,7 +78,7 @@ const LoginModal = () => {
 				<div>
 					<GoogleButton
 						className="g-btn"
-						type="dark"
+						type="light"
 						onClick={handleGoogleSignIn}
 					/>
 				</div>

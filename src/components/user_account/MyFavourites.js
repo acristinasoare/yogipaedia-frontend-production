@@ -8,7 +8,7 @@ const MyFavourites = () => {
 	return (
 		<div>
 			<TopNavBar />
-			<div className="page-content--container">
+			<div className="page-content__container">
 				<div>My Favourites Page</div>
 				<MyFlows />
 				<MyPoses />

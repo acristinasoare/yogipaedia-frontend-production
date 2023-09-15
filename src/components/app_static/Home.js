@@ -9,7 +9,7 @@ const Home = () => {
 		<>
 			<div className="App">
 				<TopNavBar />
-				<div className="page-content--container">
+				<div className="page-content__container">
 					<PoseOfTheDay />
 				</div>
 			</div>

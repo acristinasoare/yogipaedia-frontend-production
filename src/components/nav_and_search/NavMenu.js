@@ -29,27 +29,27 @@ const NavMenu = () => {
 
 	return (
 		<div className="dropdown">
-			<div className="dropdown--btn" onClick={handleDropdown}>
-				<span className="my-account">My account</span>
+			<div className="dropdown__btn" onClick={handleDropdown}>
+				<span className="my-account__label">My account</span>
 				<img
-					className="dropdown--hamburger-icon"
+					className="dropdown__hamburger-icon"
 					src="ci_hamburger-md.png"
 					alt="hamburger-menu"
 				/>
 			</div>
 			{dropdownOpen && (
-				<div className="dropdown--content">
+				<div className="dropdown-content">
 					<ul>
-						<li className="dropdown--content__item">
+						<li className="dropdown-content__item">
 							<Link to="/my-favourites">My Favourites</Link>
 						</li>
 
-						<li className="dropdown--content__item">
+						<li className="dropdown-content__item">
 							<Link to="/" onClick={handleLogOut}>
 								Log out
 							</Link>
 						</li>
-						<li className="dropdown--content__item">
+						<li className="dropdown-content__item">
 							<Link to="/" onClick={handleDelete}>
 								Delete my account
 							</Link>

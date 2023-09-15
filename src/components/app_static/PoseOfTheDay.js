@@ -19,16 +19,16 @@ const PoseOfTheDay = () => {
 	}, []);
 
 	return (
-		<div className="page-content--container">
-			<div className="pose-container">
+		<div className="page-content__container">
+			<div className="pose__container">
 				<div className="pose-of-the-day">
 					<h2>Pose Of The Day</h2>
 				</div>
-				<div className="pose-image">
+				<div className="pose__image">
 					<img src={randomImage} alt="yoga pose of the day" />
 				</div>
 			</div>
-			<div className="description-container">
+			<div className="pose-description__container">
 				<p>
 					Yoga is a holistic practice that originated in ancient India and
 					encompases physical postures, breathing exercises, meditation, and

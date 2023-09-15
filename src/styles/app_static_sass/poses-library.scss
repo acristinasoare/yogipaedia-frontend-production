@@ -1,11 +1,11 @@
 @import "../../variables/variables.scss";
 
-.poses-library {
+.poses__library {
 	margin-top: 300px;
 	overflow-y: scroll;
 }
 
-.poses-container {
+.poses__container {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 	gap: 20px;
@@ -21,6 +21,6 @@
 	height: auto;
 }
 
-.pose-button {
+.pose__button {
 	border: 0px;
 }

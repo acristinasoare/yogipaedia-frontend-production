@@ -10,11 +10,11 @@ import NavMenu from "./NavMenu";
 const TopNavBar = () => {
 	return (
 		<nav className="navbar-container">
-			<div className="poses-library-link">
+			<div className="poses-library__link">
 				<Link to="/poses-library">Poses Library</Link>
 			</div>
 			<div>
-				<a className="navbar-container--logo__link" href="/home">
+				<a className="navbar-container__logo--link" href="/home">
 					<img src="Yogipedia.png" alt="yogipedia-logo" />
 				</a>
 			</div>

@@ -13,14 +13,14 @@
 	}
 }
 
-.dropdown--hamburger-icon {
+.dropdown__hamburger-icon {
 	width: 30px;
 	height: auto;
 	box-shadow: none;
 	border-style: none;
 }
 
-.dropdown--content {
+.dropdown-content {
 	margin-top: 10px;
 	position: absolute;
 	width: 100%;
@@ -48,11 +48,11 @@ ul {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.dropdown--content__item {
+.dropdown-content__item {
 	list-style-type: none;
 }
 
-.dropdown--content__item a {
+.dropdown-content__item a {
 	color: $dark-text;
 	width: max-content;
 	&:hover {
