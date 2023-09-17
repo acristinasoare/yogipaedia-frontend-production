@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../styles/app_static_sass/poses-library.scss";
 import TopNavBar from "../nav_and_search/TopNavBar";
@@ -19,8 +20,10 @@ const PosesLibrary = () => {
       });
   }, []);
 
+  const navigate = useNavigate();
+
   const handleClick = () => {
-    //logic for opening modal with card info
+    navigate("/pose-card");
   };
 
   return (
