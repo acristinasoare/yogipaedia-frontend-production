@@ -4,6 +4,7 @@ import axios from "axios";
 import "../../styles/app_static_sass/poses-library.scss";
 import TopNavBar from "../nav_and_search/TopNavBar";
 import SideNavBar from "../nav_and_search/SideNavBar";
+import PosePreview from "./PosePreview";
 
 const PosesLibrary = () => {
   const [poses, setPoses] = useState([]);
@@ -19,7 +20,6 @@ const PosesLibrary = () => {
         console.log(yogaPictures.length);
       });
   }, []);
-
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -40,7 +40,7 @@ const PosesLibrary = () => {
             {poses.map((pose, index) => (
               <div className="grid-item" key={index}>
                 <button className="pose__button" onClick={handleClick}>
-                  <img src={pose} alt="yoga-pose" />
+                  <PosePreview pose={pose} />
                 </button>
               </div>
             ))}

@@ -8,7 +8,7 @@ import Home from "./Home";
 import PoseOfTheDay from "./PoseOfTheDay";
 import PosesLibrary from "./PosesLibrary";
 import MyFavourites from "../user_account/MyFavourites";
-import PoseCard from "./PoseCard";
+import PoseDetails from "./PoseDetails";
 
 import "../../styles/app_static_sass/app.scss";
 
@@ -30,7 +30,7 @@ const App = () => {
           <Route path="/home" element={<PoseOfTheDay />} />
           <Route path="/poses-library" element={<PosesLibrary />} />
           <Route path="/my-favourites" element={<MyFavourites />} />
-          <Route path="/pose-card" element={<PoseCard />} />
+          <Route path="/pose-card" element={<PoseDetails />} />
         </Routes>
       </UserAuthContextProvider>
     </>

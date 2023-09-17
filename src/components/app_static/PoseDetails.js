@@ -3,10 +3,10 @@
 
 import React from "react";
 
-import "../../styles/app_static_sass/pose.scss";
+import "../../styles/app_static_sass/pose-details.scss";
 
 const Pose = () => {
-	// logic goes here
+  return <div>Pose info</div>;
 };
 
 export default Pose;
