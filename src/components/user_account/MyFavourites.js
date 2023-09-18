@@ -7,7 +7,9 @@ import MyPoses from "./MyPoses";
 const MyFavourites = () => {
 	return (
 		<div>
-			<TopNavBar />
+			<div className="top-nav-bar">
+				<TopNavBar />
+			</div>
 			<div className="page-content__container">
 				<div>My Favourites Page</div>
 				<MyFlows />

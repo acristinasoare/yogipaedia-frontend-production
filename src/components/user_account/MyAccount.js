@@ -9,17 +9,22 @@ import "../../styles/user_account_sass/my-account.scss";
 
 const MyAccount = () => {
 	return (
-		<>
-			<div>
-				<Link to="/poses-library">My saved poses</Link>
+		<div>
+			<div className="top-nav-bar">
+				<TopNavBar />
 			</div>
-			<div>
-				<Link to="/my-flows">My saved flows</Link>
+			<div className="page-content__container">
+				<div>
+					<Link to="/poses-library">My saved poses</Link>
+				</div>
+				<div>
+					<Link to="/my-flows">My saved flows</Link>
+				</div>
+				<div>
+					<LogOut />
+				</div>
 			</div>
-			<div>
-				<LogOut />
-			</div>
-		</>
+		</div>
 	);
 };
 
