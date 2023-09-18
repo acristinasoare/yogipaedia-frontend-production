@@ -6,6 +6,7 @@ import "../../styles/app_static_sass/pose-of-the-day.scss";
 
 const PoseOfTheDay = () => {
   const [randomImage, setRandomImage] = useState(null);
+  const [poseName, setPoseName] = useState(null);
 
   useEffect(() => {
     const lastGeneratedDate = localStorage.getItem("lastGeneratedDate");
@@ -16,25 +17,31 @@ const PoseOfTheDay = () => {
         .get("https://yoga-api-nzy4.onrender.com/v1/poses")
         .then((response) => {
           const yogaPosesArray = response.data;
+          console.log(response.data);
           const randomIndex = Math.floor(Math.random() * yogaPosesArray.length);
           const randomImageUrl = yogaPosesArray[randomIndex].url_png;
+          const randomName = yogaPosesArray[randomIndex].english_name;
 
-          setRandomImage(randomImageUrl);
+          yogaPosesArray[randomIndex].setRandomImage(randomImageUrl);
+          yogaPosesArray[randomIndex].setPoseName(randomName);
 
           localStorage.setItem("lastGeneratedDate", currentDate);
           localStorage.setItem("lastGeneratedPictureUrl", randomImageUrl);
+          localStorage.setItem("lastGeneratedName", randomName);
         });
     } else {
       const storedPictureUrl = localStorage.getItem("lastGeneratedPictureUrl");
+      const storedName = localStorage.getItem("lastGeneratedName");
       setRandomImage(storedPictureUrl);
+      setPoseName(storedName);
     }
   }, []);
-
   return (
     <div className="page-content__container">
       <div className="pose__container">
         <div className="pose-of-the-day">
           <h2>Pose Of The Day</h2>
+          <h4>{poseName}</h4>
         </div>
         <div className="pose__image">
           <img src={randomImage} alt="yoga pose of the day" />

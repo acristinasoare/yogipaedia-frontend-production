@@ -14,84 +14,82 @@ import "../../styles/app_static_sass/pose-details.scss";
 
 // MUI modal inbuilt style settings
 const style = {
-	position: "absolute",
-	top: "50%",
-	left: "50%",
-	transform: "translate(-50%, -50%)",
-	width: 300,
-	bgcolor: "background.paper",
-	border: "2px solid #000",
-	boxShadow: 24,
-	p: 4,
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 300,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
 };
 
 const PoseDetails = ({
-	poseImage,
-	sanskritName,
-	englishName,
-	poseBenefits,
-	poseDescription,
+  poseImage,
+  sanskritName,
+  englishName,
+  poseBenefits,
+  poseDescription,
 }) => {
-	const [open, setOpen] = React.useState(false);
-	const handleOpen = () => setOpen(true);
-	const handleClose = () => setOpen(false);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-	return (
-		<div>
-			<Button onClick={handleOpen}>
-				{englishName} / {sanskritName}
-			</Button>
-			<Modal
-				className="pose__modal"
-				open={open}
-				onClose={handleClose}
-				aria-labelledby="modal-modal-title"
-				aria-describedby="modal-modal-description"
-			>
-				<Card className="pose__card" sx={{ style }}>
-					<CardMedia
-						className="pose__image"
-						component="img"
-						sx={{ height: 250, width: 250 }}
-						image={poseImage}
-						title="green iguana"
-					/>
-					<CardContent className="pose__text-areas">
-						<Typography
-							className="pose__names"
-							gutterBottom
-							variant="h5"
-							component="div"
-						>
-							{englishName} / {sanskritName}
-						</Typography>
-						<br />
-						<Typography
-							className="pose__description"
-							component="div"
-							variant="body2"
-							color="text.secondary"
-						>
-							{poseDescription}
-						</Typography>
-						<br />
-						<Typography
-							className="pose__benefits"
-							component="div"
-							variant="body2"
-							color="text.secondary"
-						>
-							Benefits: {poseBenefits}
-						</Typography>
-					</CardContent>
-					<CardActions>
-						<Button className="card__button" size="small">
-							Add to my favourites
-						</Button>
-					</CardActions>
-				</Card>
-			</Modal>
-		</div>
-	);
+  return (
+    <div>
+      <Button onClick={handleOpen}>{englishName}</Button>
+      <Modal
+        className="pose__modal"
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Card className="pose__card" sx={{ style }}>
+          <CardMedia
+            className="pose__image"
+            component="img"
+            sx={{ height: 250, width: 250 }}
+            image={poseImage}
+            title="green iguana"
+          />
+          <CardContent className="pose__text-areas">
+            <Typography
+              className="pose__names"
+              gutterBottom
+              variant="h5"
+              component="div"
+            >
+              {englishName} / {sanskritName}
+            </Typography>
+            <br />
+            <Typography
+              className="pose__description"
+              component="div"
+              variant="body2"
+              color="text.secondary"
+            >
+              {poseDescription}
+            </Typography>
+            <br />
+            <Typography
+              className="pose__benefits"
+              component="div"
+              variant="body2"
+              color="text.secondary"
+            >
+              Benefits: {poseBenefits}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button className="card__button" size="small">
+              Add to my favourites
+            </Button>
+          </CardActions>
+        </Card>
+      </Modal>
+    </div>
+  );
 };
 export default PoseDetails;

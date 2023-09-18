@@ -19,8 +19,6 @@ const PosePreview = ({
   };
   return (
     <div className="pose-preview__container">
-      {/* <h1 className="pose-preview__english-name">{englishName}</h1>
-			<h2 className="pose-preview__sanskrit-name">{sanskritName}</h2> */}
       <img className="pose-preview__image" src={poseImage} alt="yoga-pose" />
       <button
         className="pose-preview__favourite-button"
