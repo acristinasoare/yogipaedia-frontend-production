@@ -19,7 +19,7 @@ const TopNavBar = () => {
         </div>
         <NavMenu />
       </div>
-    </nav>
+   </nav>
   );
 };
 
