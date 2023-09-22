@@ -5,61 +5,70 @@ import axios from "axios";
 import "../../styles/app_static_sass/pose-of-the-day.scss";
 
 const PoseOfTheDay = () => {
-  const [randomImage, setRandomImage] = useState(null);
-  const [poseName, setPoseName] = useState(null);
+	const [randomImage, setRandomImage] = useState(null);
+	const [poseName, setPoseName] = useState(null);
 
-  useEffect(() => {
-    const lastGeneratedDate = localStorage.getItem("lastGeneratedDate");
-    const currentDate = new Date().toDateString();
+	useEffect(() => {
+		const lastGeneratedDate = localStorage.getItem("lastGeneratedDate");
+		const currentDate = new Date().toDateString();
 
-    if (lastGeneratedDate !== currentDate) {
-      axios.get("/poses").then((response) => {
-        const yogaPosesArray = response.data;
-        console.log(response.data);
-        const randomIndex = Math.floor(Math.random() * yogaPosesArray.length);
-        const randomImageUrl = yogaPosesArray[randomIndex].url_png;
-        const randomName = yogaPosesArray[randomIndex].pose_name;
+		if (lastGeneratedDate !== currentDate) {
+			axios.get("/poses").then((response) => {
+				const yogaPosesArray = response.data;
 
-        yogaPosesArray[randomIndex].setRandomImage(randomImageUrl);
-        yogaPosesArray[randomIndex].setPoseName(randomName);
+				const randomIndex = Math.floor(Math.random() * yogaPosesArray.length);
+				const randomPose = yogaPosesArray[randomIndex];
+				const randomImageUrl = randomPose.url_png;
+				const randomName = randomPose.pose_name;
 
-        localStorage.setItem("lastGeneratedDate", currentDate);
-        localStorage.setItem("lastGeneratedPictureUrl", randomImageUrl);
-        localStorage.setItem("lastGeneratedName", randomName);
-      });
-    } else {
-      const storedPictureUrl = localStorage.getItem("lastGeneratedPictureUrl");
-      const storedName = localStorage.getItem("lastGeneratedName");
-      setRandomImage(storedPictureUrl);
-      setPoseName(storedName);
-    }
-  }, []);
-  return (
-    <div className="page-content__container">
-      <div className="pose__container">
-        <div className="pose-of-the-day">
-          <h2>Pose Of The Day</h2>
-          <h4>{poseName}</h4>
-        </div>
-        <div className="pose__image">
-          <img src={randomImage} alt="yoga pose of the day" />
-        </div>
-      </div>
-      <div className="pose-description__container">
-        <p>
-          Yoga is a holistic practice that originated in ancient India and
-          encompases physical postures, breathing exercises, meditation, and
-          ethical principles. It is a discipline aimed at promoting physical,
-          mental, and spiritual well-being. Through the practice of yoga,
-          individuals can improve flexibility, strength, and balance, while also
-          reducing stress, enhancing mental clarity and fostering a sense of
-          inner peace. Whether you are a beginner yogi or an aspiring yoga
-          teacher, you can explore a variety of yoga poses by using the
-          Yogipedia app.
-        </p>
-      </div>
-    </div>
-  );
+				console.log(randomPose);
+				console.log(randomImageUrl);
+				console.log(randomName);
+
+				// I think the following 2 lines of code are unnecessary (and throw a TypeError):
+				// yogaPosesArray[randomIndex].setRandomImage(randomImageUrl);
+				// yogaPosesArray[randomIndex].setPoseName(randomName);
+
+				setRandomImage(randomImageUrl);
+				setPoseName(randomName);
+
+				localStorage.setItem("lastGeneratedDate", currentDate);
+				localStorage.setItem("lastGeneratedPictureUrl", randomImageUrl);
+				localStorage.setItem("lastGeneratedName", randomName);
+			});
+		} else {
+			const storedPictureUrl = localStorage.getItem("lastGeneratedPictureUrl");
+			const storedName = localStorage.getItem("lastGeneratedName");
+			setRandomImage(storedPictureUrl);
+			setPoseName(storedName);
+		}
+	}, []);
+	return (
+		<div className="page-content__container">
+			<div className="pose__container">
+				<div className="pose-of-the-day">
+					<h2>Pose Of The Day</h2>
+					<h4>{poseName}</h4>
+				</div>
+				<div className="pose__image">
+					<img src={randomImage} alt="yoga pose of the day" />
+				</div>
+			</div>
+			<div className="pose-description__container">
+				<p>
+					Yoga is a holistic practice that originated in ancient India and
+					encompases physical postures, breathing exercises, meditation, and
+					ethical principles. It is a discipline aimed at promoting physical,
+					mental, and spiritual well-being. Through the practice of yoga,
+					individuals can improve flexibility, strength, and balance, while also
+					reducing stress, enhancing mental clarity and fostering a sense of
+					inner peace. Whether you are a beginner yogi or an aspiring yoga
+					teacher, you can explore a variety of yoga poses by using the
+					Yogipedia app.
+				</p>
+			</div>
+		</div>
+	);
 };
 
 export default PoseOfTheDay;
