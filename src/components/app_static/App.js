@@ -5,10 +5,8 @@ import { UserAuthContextProvider } from "../../context/UserAuthContext";
 import LoginModal from "../authorisation/LoginModal";
 import SignUp from "../authorisation/SignUp";
 import Home from "./Home";
-import PoseOfTheDay from "./PoseOfTheDay";
 import PosesLibrary from "./PosesLibrary";
 import MyFavourites from "../user_account/MyFavourites";
-import PoseDetails from "./PoseDetails";
 
 import "../../styles/app_static_sass/app.scss";
 
@@ -17,6 +15,8 @@ const App = () => {
     <>
       <UserAuthContextProvider>
         <Routes>
+          <Route path="/" element={<LoginModal />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route
             path="/home"
             element={
@@ -25,12 +25,22 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-          <Route path="/" element={<LoginModal />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/home" element={<PoseOfTheDay />} />
-          <Route path="/poses-library" element={<PosesLibrary />} />
-          <Route path="/my-favourites" element={<MyFavourites />} />
-          <Route path="/pose-card" element={<PoseDetails />} />
+          <Route
+            path="/poses-library"
+            element={
+              <ProtectedRoute>
+                <PosesLibrary />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/my-favourites"
+            element={
+              <ProtectedRoute>
+                <MyFavourites />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </UserAuthContextProvider>
     </>
