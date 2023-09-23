@@ -9,6 +9,12 @@
   margin-right: 100px;
 }
 
+.alert-message {
+  margin-left: 500px;
+  color: #d90966;
+  font-size: x-large;
+  font-weight: bold;
+}
 .poses__container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

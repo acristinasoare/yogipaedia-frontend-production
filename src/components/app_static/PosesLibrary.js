@@ -4,10 +4,13 @@ import "../../styles/app_static_sass/poses-library.scss";
 import TopNavBar from "../nav_and_search/TopNavBar";
 import SideNavBar from "../nav_and_search/SideNavBar";
 import PosePreview from "./PosePreview";
+import Alert from "./Alert";
 
 const PosesLibrary = () => {
   const [poses, setPoses] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [alertMessage, setAlertMessage] = useState(null);
+
   const handleSelectedCategory = (category) => {
     setSelectedCategory(category);
   };
@@ -22,22 +25,42 @@ const PosesLibrary = () => {
       endpoint = `/poses/category/${selectedCategory}`;
     }
 
-    axios.get(endpoint).then((response) => {
-      console.log(response);
-      const yogaPosesArray = response.data;
-      console.log(yogaPosesArray);
-      const yogaPictures = yogaPosesArray.map((pose) => [
-        pose.url_png,
-        pose.pose_name,
-        pose.sanskrit_name,
-        pose.pose_benefits,
-        pose.pose_description,
-      ]);
-      setPoses(yogaPictures);
-      console.log(yogaPictures);
-      console.log(yogaPictures.length);
-    });
+    axios
+      .get(endpoint)
+      .then((response) => {
+        console.log(response);
+        const yogaPosesArray = response.data;
+        console.log(yogaPosesArray);
+        const yogaPictures = yogaPosesArray.map((pose) => [
+          pose.url_png,
+          pose.pose_name,
+          pose.sanskrit_name,
+          pose.pose_benefits,
+          pose.pose_description,
+        ]);
+        setPoses(yogaPictures);
+        console.log(yogaPictures);
+        console.log(yogaPictures.length);
+      })
+      .catch(() => setAlertMessage("Server Error. Please try again later."));
   }, [selectedCategory]);
+
+  if (alertMessage) {
+    return (
+      <div>
+        <div className="top-nav-bar">
+          <TopNavBar />
+        </div>
+        <SideNavBar
+          handleSelectedCategory={handleSelectedCategory}
+          handleClearFilter={handleClearFilter}
+        />
+        <div className="alert-message">
+          <Alert message={alertMessage} />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
