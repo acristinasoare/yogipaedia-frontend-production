@@ -16,7 +16,7 @@ const PoseOfTheDay = () => {
 
     if (lastGeneratedDate === currentDate) {
       axios
-        .get("/poses1")
+        .get("/poses")
         .then((response) => {
           const yogaPosesArray = response.data;
 

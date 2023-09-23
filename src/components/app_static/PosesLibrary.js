@@ -19,7 +19,7 @@ const PosesLibrary = () => {
   };
 
   useEffect(() => {
-    let endpoint = "/poses1";
+    let endpoint = "/poses";
 
     if (selectedCategory) {
       endpoint = `/poses/category/${selectedCategory}`;
