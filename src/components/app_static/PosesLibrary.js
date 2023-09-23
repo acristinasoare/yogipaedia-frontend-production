@@ -39,12 +39,10 @@ const PosesLibrary = () => {
     });
   }, [selectedCategory]);
 
-  console.log(`The selected category data as: ${selectedCategory}`);
-
   return (
     <div>
       <div className="top-nav-bar">
-        <TopNavBar handleClearFilter={handleClearFilter} />
+        <TopNavBar />
       </div>
       <div className="side-bar">
         <SideNavBar
@@ -56,16 +54,14 @@ const PosesLibrary = () => {
         <div className="poses__library">
           <div className="poses__container">
             {poses.map((pose, index) => (
-              <div className="grid-item" key={index}>
-                <button className="pose__button">
-                  <PosePreview
-                    poseImage={pose[0]}
-                    englishName={pose[1]}
-                    sanskritName={pose[2]}
-                    poseBenefits={pose[3]}
-                    poseDescription={pose[4]}
-                  />
-                </button>
+              <div className="grid-item" key={index} onClick={() => {}}>
+                <PosePreview
+                  poseImage={pose[0]}
+                  englishName={pose[1]}
+                  sanskritName={pose[2]}
+                  poseBenefits={pose[3]}
+                  poseDescription={pose[4]}
+                />
               </div>
             ))}
           </div>

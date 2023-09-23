@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "../../styles/nav_search_sass/top-nav-bar.scss";
 import NavMenu from "./NavMenu";
 
-const TopNavBar = (handleClearFilter) => {
+const TopNavBar = () => {
   return (
     <nav className="navbar-container">
       <div className="navbar-left">
@@ -15,9 +15,7 @@ const TopNavBar = (handleClearFilter) => {
       </div>
       <div className="navbar-right">
         <div className="poses-library__link">
-          <Link to="/poses-library" onClick={handleClearFilter}>
-            Poses Library
-          </Link>
+          <Link to="/poses-library">Poses Library</Link>
         </div>
         <NavMenu />
       </div>
