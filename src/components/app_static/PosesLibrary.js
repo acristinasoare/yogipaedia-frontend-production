@@ -11,6 +11,9 @@ const PosesLibrary = () => {
 	const handleSelectedCategory = (category) => {
 		setSelectedCategory(category);
 	};
+	const handleClearFilter = () => {
+		setSelectedCategory(null);
+	};
 
 	useEffect(() => {
 		// if no filter selected:

@@ -6,7 +6,11 @@ import React from "react";
 import { button } from "react-router-dom";
 import "../../styles/nav_search_sass/side-nav-bar.scss";
 
-const SideNavBar = ({ handleSelectedCategory, handleSelectedLevel }) => {
+const SideNavBar = ({
+	handleSelectedCategory,
+	handleSelectedLevel,
+	handleClearFilter,
+}) => {
 	return (
 		<div className="sidebar-container">
 			<div className="search-bar">
@@ -16,6 +20,12 @@ const SideNavBar = ({ handleSelectedCategory, handleSelectedLevel }) => {
 						type="text"
 						placeholder="Search by name ..."
 					/>
+					<button
+						type="submit"
+						className="clear-filter onClick={handleClearFilter}"
+					>
+						Clear filter
+					</button>
 					<button type="submit" className="search-button">
 						Search
 					</button>
