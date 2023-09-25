@@ -26,12 +26,15 @@ const style = {
 };
 
 const PoseDetails = ({
+	userId,
+	poseId,
 	poseImage,
 	sanskritName,
 	englishName,
 	poseBenefits,
 	poseDescription,
 	poseLevel,
+	handleFavouriteClick,
 }) => {
 	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => setOpen(true);
@@ -84,7 +87,16 @@ const PoseDetails = ({
 						</Typography>
 					</CardContent>
 					<CardActions>
-						<Button className="card__button" size="small">
+						<Button
+							className="card__button"
+							size="small"
+							onClick={() =>
+								handleFavouriteClick(
+									(userId = { userId }),
+									(poseId = { poseId })
+								)
+							}
+						>
 							Add to my favourites
 						</Button>
 					</CardActions>
