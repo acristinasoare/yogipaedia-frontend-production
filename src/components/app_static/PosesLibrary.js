@@ -11,7 +11,7 @@ const PosesLibrary = () => {
 	const [selectedCategory, setSelectedCategory] = useState(null);
 	const [alertMessage, setAlertMessage] = useState(null);
 	const [selectedLevel, setSelectedLevel] = useState(null);
-	let yogaPosesArray;
+	// let yogaPosesArray;
 
 	const handleSelectedCategory = (category) => {
 		setSelectedCategory(category);
@@ -34,7 +34,8 @@ const PosesLibrary = () => {
 		axios
 			.get(endpoint)
 			.then((response) => {
-				yogaPosesArray = response.data;
+				const yogaPosesArray = response.data;
+				console.log(yogaPosesArray);
 
 				const filteredPictures = yogaPosesArray
 					.filter((pose) => pose.level === selectedLevel)
