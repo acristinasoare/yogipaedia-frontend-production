@@ -58,10 +58,6 @@ const PosesLibrary = () => {
 					setPoses(filteredPictures);
 				} else {
 					setPoses(yogaPictures);
-					console.log(`yoga pictures: `);
-					console.log(yogaPictures);
-					console.log(`filtered pictures:`);
-					console.log(filteredPictures);
 				}
 			})
 			.catch(() => setAlertMessage("Server Error. Please try again later."));
