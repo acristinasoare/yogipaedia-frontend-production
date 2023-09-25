@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "../authorisation/ProtectedRoute";
 import { UserAuthContextProvider } from "../../context/UserAuthContext";
@@ -11,11 +12,16 @@ import MyFavourites from "../user_account/MyFavourites";
 import "../../styles/app_static_sass/app.scss";
 
 const App = () => {
+  const [userId, setUserId] = useState(null);
+  console.log(userId);
   return (
     <>
       <UserAuthContextProvider>
         <Routes>
-          <Route path="/" element={<LoginModal />} />
+          <Route
+            path="/"
+            element={<LoginModal userId={userId} setUserId={setUserId} />}
+          />
           <Route path="/signup" element={<SignUp />} />
           <Route
             path="/home"
@@ -29,7 +35,7 @@ const App = () => {
             path="/poses-library"
             element={
               <ProtectedRoute>
-                <PosesLibrary />
+                <PosesLibrary userId={userId} />
               </ProtectedRoute>
             }
           />
@@ -37,7 +43,7 @@ const App = () => {
             path="/my-favourites"
             element={
               <ProtectedRoute>
-                <MyFavourites />
+                <MyFavourites userId={userId} />
               </ProtectedRoute>
             }
           />
