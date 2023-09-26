@@ -33,7 +33,7 @@ const PosePreview = ({
 				userId: userId,
 				poseId: poseId,
 			});
-			setIsFavourite(isFavourite);
+			setIsFavourite(!isFavourite);
 		}
 	};
 	//
