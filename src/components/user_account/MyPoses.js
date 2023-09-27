@@ -8,60 +8,61 @@ import axios from "axios";
 import PosePreview from "../app_static/PosePreview";
 import "../../styles/user_account_sass/my-poses.scss";
 
-const MyPoses = (userId) => {
-  const [poses, setPoses] = useState([]);
+const MyPoses = ({ userId }) => {
+	const [poses, setPoses] = useState([]);
 
-  // const [alertMessage, setAlertMessage] = useState(null);
+	// const [alertMessage, setAlertMessage] = useState(null);
 
-  useEffect(() => {
-    let endpoint = "/favourites";
+	useEffect(() => {
+		console.log(userId);
+		let endpoint = `/favourites/${userId}`;
 
-    axios
-      .get(endpoint)
-      .then((response) => {
-        const myFavouritesArray = response.data;
-        console.log(myFavouritesArray);
+		axios
+			.get(endpoint)
+			.then((response) => {
+				const myFavouritesArray = response.data;
+				console.log(myFavouritesArray);
 
-        const favouritesPictures = myFavouritesArray.map((pose) => [
-          pose.url_png,
-          pose.pose_name,
-          pose.sanskrit_name,
-          pose.pose_benefits,
-          pose.pose_description,
-        ]);
-        setPoses(favouritesPictures);
-      })
-      .catch((e) => console.log(e));
-  }, []);
+				// const favouritesPictures = myFavouritesArray.map((pose) => [
+				// 	pose.url_png,
+				// 	pose.pose_name,
+				// 	pose.sanskrit_name,
+				// 	pose.pose_benefits,
+				// 	pose.pose_description,
+				// ]);
+				setPoses(myFavouritesArray);
+			})
+			.catch((e) => console.log(e));
+	}, []);
 
-  // if (alertMessage) {
-  // 	return (
-  // 		<div>
-  // 			<div className="alert-message">
-  // 				<Alert message={alertMessage} />
-  // 			</div>
-  // 		</div>
-  // 	);
-  // }
+	// if (alertMessage) {
+	// 	return (
+	// 		<div>
+	// 			<div className="alert-message">
+	// 				<Alert message={alertMessage} />
+	// 			</div>
+	// 		</div>
+	// 	);
+	// }
 
-  return (
-    <div>
-      <div className="poses__container">
-        {poses.map((pose, index) => (
-          <div className="grid-item" key={index} onClick={() => {}}>
-            <PosePreview
-              poseImage={pose[0]}
-              englishName={pose[1]}
-              sanskritName={pose[2]}
-              poseBenefits={pose[3]}
-              poseDescription={pose[4]}
-              poseLevel={pose[5]}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+	return (
+		<div>
+			<div className="poses__container">
+				{poses.map((pose, index) => (
+					<div className="grid-item" key={index} onClick={() => {}}>
+						<PosePreview
+							poseImage={pose.url_png}
+							englishName={pose.pose_name}
+							sanskritName={pose.sanskrit_name}
+							poseBenefits={pose.pose_benefits}
+							poseDescription={pose.pose_description}
+							poseLevel={pose.level}
+						/>
+					</div>
+				))}
+			</div>
+		</div>
+	);
 };
 
 export default MyPoses;
