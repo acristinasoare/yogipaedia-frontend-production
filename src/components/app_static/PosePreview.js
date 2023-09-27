@@ -1,6 +1,6 @@
 // Small version of Pose.js, with name and photo. clickable -  links to main Pose.js
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/app_static_sass/pose-preview.scss";
 import PoseDetails from "./PoseDetails";
 import axios from "axios";
@@ -16,6 +16,19 @@ const PosePreview = ({
   poseLevel,
 }) => {
   const [isFavourite, setIsFavourite] = useState(false);
+
+  useEffect(() => {
+    // Fetch user's favourite poses and check if the current pose is in favourites
+    axios
+      .get(`/favourites/${userId}`)
+      .then((response) => {
+        console.log(response);
+        const favouritePoseIds = response.data.map(({ pose_id }) => pose_id);
+        console.log(favouritePoseIds);
+        setIsFavourite(favouritePoseIds.includes(poseId));
+      })
+      .catch((error) => console.error("Error fetching favorites:", error));
+  }, [userId, poseId]);
 
   const handleFavouriteClick = (userId, poseId) => {
     if (!isFavourite) {

@@ -6,8 +6,6 @@ import axios from "axios";
 // import Alert from "./Alert";
 
 import PosePreview from "../app_static/PosePreview";
-import TopNavBar from "../nav_and_search/TopNavBar";
-
 import "../../styles/user_account_sass/my-poses.scss";
 
 const MyPoses = (userId) => {
