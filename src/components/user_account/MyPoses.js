@@ -10,12 +10,13 @@ import "../../styles/user_account_sass/my-poses.scss";
 
 const MyPoses = ({ userId }) => {
 	const [poses, setPoses] = useState([]);
+	const currentUser = localStorage.getItem("currentUser");
+	console.log(currentUser);
 
 	// const [alertMessage, setAlertMessage] = useState(null);
 
 	useEffect(() => {
-		console.log(userId);
-		let endpoint = `/favourites/${userId}`;
+		let endpoint = `/favourites/${currentUser}`;
 
 		axios
 			.get(endpoint)
