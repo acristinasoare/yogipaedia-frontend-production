@@ -16,11 +16,14 @@ const PosePreview = ({
 	poseLevel,
 }) => {
 	const [isFavourite, setIsFavourite] = useState(false);
+	const currentUser = localStorage.getItem("currentUser");
+	console.log("poseId at top of PosePreview works");
+	console.log(poseId);
 
 	useEffect(() => {
 		// Fetch user's favourite poses and check if the current pose is in favourites
 		axios
-			.get(`/favourites/${userId}`)
+			.get(`/favourites/${currentUser}`)
 			.then((response) => {
 				console.log(response);
 				const favouritePoseIds = response.data.map(({ pose_id }) => pose_id);
@@ -28,11 +31,12 @@ const PosePreview = ({
 				setIsFavourite(favouritePoseIds.includes(poseId));
 			})
 			.catch((error) => console.error("Error fetching favorites:", error));
-	}, [userId, poseId]);
+	}, [currentUser, poseId]);
 
-	const handleFavouriteClick = (poseId) => {
-		const currentUser = localStorage.getItem("currentUser");
+	const handleFavouriteClick = () => {
+		console.log("just clicked the favourites button");
 		console.log(currentUser);
+		console.log(poseId);
 		if (!isFavourite) {
 			axios
 				.post("/favourites", {
