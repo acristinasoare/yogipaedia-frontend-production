@@ -3,7 +3,7 @@
 import React from "react";
 import "../../styles/app_static_sass/pose-preview.scss";
 import PoseDetails from "./PoseDetails";
-import FavouriteButton from "./FavouriteButton";
+// import FavouriteButton from "./FavouriteButton";
 
 const PosePreview = ({
   userId,
@@ -18,9 +18,7 @@ const PosePreview = ({
   return (
     <div className="pose-preview__container">
       <img className="pose-preview__image" src={poseImage} alt="yoga-pose" />
-      <FavouriteButton userId={userId} poseId={poseId} />
       <PoseDetails
-        // handleFavouriteClick={() => handleFavouriteClick(userId, poseId)}
         userId={userId}
         poseId={poseId}
         poseImage={poseImage}
