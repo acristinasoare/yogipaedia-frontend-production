@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../../styles/app_static_sass/favourite-button.scss";
 
 const FavouriteButton = ({ userId, poseId }) => {
   const [isFavourite, setIsFavourite] = useState(false);
@@ -8,7 +9,7 @@ const FavouriteButton = ({ userId, poseId }) => {
       xmlns="http://www.w3.org/2000/svg"
       width="18"
       height="18"
-      fill="#ffc2cd"
+      fill="#EDA994"
       className="bi bi-heart-fill"
       viewBox="0 0 16 16"
     >
@@ -24,7 +25,7 @@ const FavouriteButton = ({ userId, poseId }) => {
       xmlns="http://www.w3.org/2000/svg"
       width="18"
       height="18"
-      fill="#ffc2cd"
+      fill="#EDA994"
       className="bi bi-heart"
       viewBox="0 0 16 16"
     >
