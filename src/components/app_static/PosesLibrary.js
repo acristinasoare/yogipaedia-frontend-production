@@ -104,8 +104,13 @@ const PosesLibrary = ({ userId }) => {
           <div className="poses__container">
             {poses.map((pose, index) => (
               <div className="grid-item" key={index} onClick={() => {}}>
-                <FavouriteButton userId={userId} poseId={pose[0]} />
+                <FavouriteButton
+                  className="grid-item__button"
+                  userId={userId}
+                  poseId={pose[0]}
+                />
                 <PosePreview
+                  className="grid-item__pose"
                   userId={userId}
                   poseId={pose[0]}
                   poseImage={pose[1]}
