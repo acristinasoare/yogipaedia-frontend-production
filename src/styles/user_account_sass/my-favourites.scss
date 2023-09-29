@@ -1,1 +1,15 @@
 @import "../../variables/variables.scss";
+
+.page-content__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.title-text {
+  margin-bottom: 75px;
+}
