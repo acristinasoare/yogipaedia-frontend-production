@@ -9,7 +9,7 @@ const MyFavourites = ({ userId }) => {
       <div className="top-nav-bar">
         <TopNavBar />
       </div>
-      <div className="page-content__container">
+      <div className="page-content-container">
         <div className="page-content__title">
           <h2 className="title-text">My Favourite Poses</h2>
         </div>
@@ -18,5 +18,4 @@ const MyFavourites = ({ userId }) => {
     </div>
   );
 };
-
 export default MyFavourites;
