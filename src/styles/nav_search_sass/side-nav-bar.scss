@@ -12,23 +12,20 @@
   left: 0;
 }
 
-.search-bar {
-  margin-top: 40px;
-}
-
-.search-input {
-  width: 10rem;
-}
-
-.search-button {
-  margin-top: 10px;
-}
-
 .sidebar-title {
   margin-top: 20px;
   font-weight: bolder;
 }
 
-.sidebar-link {
-  text-decoration: none;
+.sidebar-button {
+  border: 0px;
+  background: none;
+  &:hover {
+    transition: 300ms;
+  }
+}
+
+.clear-filter {
+  margin-top: 20px;
+  max-width: 100px;
 }
