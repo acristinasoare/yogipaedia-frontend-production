@@ -12,7 +12,6 @@ const PosesLibrary = ({ userId }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [alertMessage, setAlertMessage] = useState(null);
   const [selectedLevel, setSelectedLevel] = useState(null);
-  // let yogaPosesArray;
 
   const handleSelectedCategory = (category) => {
     setSelectedCategory(category);

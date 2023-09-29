@@ -16,15 +16,13 @@ const NavMenu = () => {
   const navigate = useNavigate();
 
   const handleLogOut = () => {
-    // logic for handling log out and clearing user session to be inserted. check context/UserAuthContext.js for clues. All covered by firebase.
     logOut();
-    navigate("/"); //redirects user to log in page
+    navigate("/");
   };
 
   const handleDelete = () => {
     unsubscribe();
-    //logic for handling delete account to be inserted. check context/UserAuthContext.js for clues. All covered by firebase.
-    navigate("/"); //redirects user to log in page
+    navigate("/");
   };
 
   return (
@@ -57,10 +55,6 @@ const NavMenu = () => {
         </div>
       )}
     </div>
-
-    //logout and delete account have to be buttons to be able to add logic for loging out/deleting account
-    //Holly you can add styling so the buttons have no margins
-    // and the background color is the same as the dropdown so it looks like a normal link rather than a button
   );
 };
 

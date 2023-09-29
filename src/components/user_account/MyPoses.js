@@ -1,48 +1,38 @@
-// User's saved (favourited) Pose.js cards. Requires user to be logged in to render. Link in MyAccount dropdown menu.
-// Display favourite poses - similar to category/search results. Each pose on click opens pose component. Remove from favourites option - heart will be filled, then click to remove, outline, re-render.
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import Alert from "./Alert";
+import Alert from "../app_static/Alert";
 import PosePreview from "../app_static/PosePreview";
 import "../../styles/user_account_sass/my-poses.scss";
 import FavouriteButton from "../app_static/FavouriteButton";
 
 const MyPoses = ({ userId }) => {
   const [poses, setPoses] = useState([]);
-  // const [alertMessage, setAlertMessage] = useState(null);
-  const currentUser = localStorage.getItem("currentUser");
+  const [alertMessage, setAlertMessage] = useState(null);
 
   useEffect(() => {
+    const currentUser = localStorage.getItem("currentUser");
     let endpoint = `/favourites/${currentUser}`;
 
     axios
       .get(endpoint)
       .then((response) => {
         const myFavouritesArray = response.data;
-        console.log(myFavouritesArray);
-
-        // const favouritesPictures = myFavouritesArray.map((pose) => [
-        // 	pose.url_png,
-        // 	pose.pose_name,
-        // 	pose.sanskrit_name,
-        // 	pose.pose_benefits,
-        // 	pose.pose_description,
-        // ]);
         setPoses(myFavouritesArray);
       })
-      .catch((e) => console.log(e));
+      .catch(() =>
+        setAlertMessage(
+          "Server error. Unable to retrieve user's favourite poses."
+        )
+      );
   }, []);
 
-  // if (alertMessage) {
-  //   return (
-  //     <div>
-  //       <div className="alert-message">
-  //         <Alert message={alertMessage} />
-  //       </div>
-  //     </div>
-  //   );
-  // }
+  if (alertMessage) {
+    return (
+      <div className="alert-message">
+        <Alert message={alertMessage} />
+      </div>
+    );
+  }
 
   return (
     <div>
