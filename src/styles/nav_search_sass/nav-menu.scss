@@ -1,51 +1,54 @@
 @import "../../variables/variables.scss";
 
 .dropdown {
-	margin-right: 50px;
-	margin-top: 30px;
-	position: relative;
-	display: flex;
-	border-radius: 10px;
+  margin-right: 50px;
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  &:hover {
+    background-color: $background-dark;
+    transition: 500ms;
+  }
 }
 
 .dropdown__hamburger-icon {
-	width: 30px;
-	height: auto;
-	box-shadow: none;
-	border-style: none;
-	color: $text;
+  width: 20px;
+  height: auto;
+  box-shadow: none;
+  border-style: none;
+  color: $text;
 }
 
 .dropdown-content {
-	margin-top: 10px;
-	position: absolute;
-	width: 100%;
-	transition: all 1s ease-in-out;
-	filter: drop-shadow($drop-shadow);
+  margin-top: 10px;
+  position: absolute;
+  width: 100%;
+  transition: all 1s ease-in-out;
+  filter: drop-shadow($drop-shadow);
 }
 
 ul {
-	position: absolute;
-	background-color: $background-light;
-	right: 10px;
-	top: 40px;
-	width: auto;
-	border-radius: 10%;
-	font-size: medium;
-	padding-top: 20px;
-	padding-right: 20px;
-	padding-bottom: 20px;
-	transition: all 1s ease-in-out;
+  position: absolute;
+  background-color: $background-light;
+  right: 10px;
+  top: 40px;
+  width: auto;
+  border-radius: 10%;
+  font-size: medium;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  transition: all 1s ease-in-out;
 }
 
 .dropdown-content__item {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 .dropdown-content__item a {
-	color: $text;
-	width: max-content;
-	&:hover {
-		transition: 500ms;
-	}
+  color: $text;
+  width: max-content;
+  &:hover {
+    transition: 500ms;
+  }
 }
