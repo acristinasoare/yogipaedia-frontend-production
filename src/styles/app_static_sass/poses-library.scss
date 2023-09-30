@@ -16,6 +16,16 @@
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	gap: 20px;
+	margin-top: 50px;
+	height: calc(100vh - 250px);
+	overflow: auto;
+	box-sizing: border-box;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none;
+}
+
+.poses__container::-webkit-scrollbar {
+	display: none;
 }
 
 .grid-item {
