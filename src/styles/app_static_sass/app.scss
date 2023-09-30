@@ -4,7 +4,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	overflow: visible;
+	overflow: hidden;
 	width: vw;
 	height: vh;
 	align-items: center;
@@ -59,7 +59,7 @@ h1 {
 	margin-left: 40px;
 	margin-right: 40px;
 	margin-top: 250px;
-	min-height: vh;
+	height: calc(vh - 250px);
 	width: vw;
 	display: flex;
 	align-items: center;

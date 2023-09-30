@@ -13,7 +13,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
-	height: fit-content;
+	// height: 100vh;
 }
 
 code {
@@ -24,14 +24,15 @@ code {
 :root a {
 	color: $text;
 	&:hover {
-		color: $background-light;
+		color: $accent-one-dark;
 		transition: 500ms;
 	}
 }
 
 .bg-img {
 	position: fixed;
-	width: 100vw;
+	height: auto;
+	// width: 100vw;
 	opacity: 0.4;
 	z-index: -5;
 }
