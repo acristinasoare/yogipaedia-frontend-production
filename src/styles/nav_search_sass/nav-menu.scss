@@ -9,6 +9,7 @@
     background-color: $background-dark;
     transition: 500ms;
   }
+  margin-bottom: 30px;
 }
 
 .dropdown__hamburger-icon {
@@ -17,6 +18,7 @@
   box-shadow: none;
   border-style: none;
   color: $text;
+  // margin-bottom: 20px;
 }
 
 .dropdown-content {
