@@ -25,15 +25,11 @@ const style = {
 };
 
 const PoseDetails = ({
-  userId,
-  poseId,
   poseImage,
   sanskritName,
   englishName,
   poseBenefits,
   poseDescription,
-  poseLevel,
-  handleFavouriteClick,
 }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
