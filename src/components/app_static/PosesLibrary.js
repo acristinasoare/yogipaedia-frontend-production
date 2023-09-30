@@ -26,31 +26,33 @@ const PosesLibrary = ({ userId }) => {
       "Core",
       "Seated",
       "Backbend",
-      "Strengthening",
+      "Strenghtening",
       "Chest Opening",
     ];
-
     const difficultyLevels = ["Beginner", "Intermediate", "Advanced"];
 
     if (categories.includes(selectedFilter)) {
       endpoint = `/poses/category/${selectedFilter}`;
     } else if (difficultyLevels.includes(selectedFilter)) {
-      endpoint = `/poses/category/${selectedFilter}`;
+      endpoint = `/poses/level/${selectedFilter}`;
     }
 
-    axios.get(endpoint).then((response) => {
-      const yogaPosesArray = response.data;
+    axios
+      .get(endpoint)
+      .then((response) => {
+        const yogaPosesArray = response.data;
 
-      const yogaPictures = yogaPosesArray.map((pose) => [
-        pose.pose_id,
-        pose.url_png,
-        pose.pose_name,
-        pose.sanskrit_name,
-        pose.pose_benefits,
-        pose.pose_description,
-      ]);
-      setPoses(yogaPictures);
-    });
+        const yogaPictures = yogaPosesArray.map((pose) => [
+          pose.pose_id,
+          pose.url_png,
+          pose.pose_name,
+          pose.sanskrit_name,
+          pose.pose_benefits,
+          pose.pose_description,
+        ]);
+        setPoses(yogaPictures);
+      })
+      .catch(() => setAlertMessage("Server Error.Please try again later"));
   }, [selectedFilter]);
 
   if (alertMessage) {
