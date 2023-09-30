@@ -1,41 +1,14 @@
-// Search via two dropdown buttons: Difficulty Level/Type.
-// Optional: My Flows
-// Optional: Suggested Flows with options
-
 import React from "react";
 import "../../styles/nav_search_sass/side-nav-bar.scss";
 
-const SideNavBar = ({
-  handleSelectedCategory,
-  handleSelectedLevel,
-  handleClearFilter,
-}) => {
+const SideNavBar = ({ handleSelectedFilter, handleClearFilter }) => {
   return (
     <div className="sidebar-container">
-      <div className="search-bar">
-        <form>
-          <input
-            className="search-input"
-            type="text"
-            placeholder="Search by name ..."
-          />
-          <button
-            type="submit"
-            className="clear-filter"
-            onClick={() => handleClearFilter()}
-          >
-            Clear filter
-          </button>
-          <button type="submit" className="search-button">
-            Search
-          </button>
-        </form>
-      </div>
       <div className="sidebar-title">Categories</div>
       <div className="sidebar-div">
         <button
           className="sidebar-button"
-          onClick={() => handleSelectedCategory("Core")}
+          onClick={() => handleSelectedFilter("Core")}
         >
           Core
         </button>
@@ -43,7 +16,7 @@ const SideNavBar = ({
       <div className="sidebar-div">
         <button
           className="sidebar-button"
-          onClick={() => handleSelectedCategory("Seated")}
+          onClick={() => handleSelectedFilter("Seated")}
         >
           Seated
         </button>
@@ -51,7 +24,7 @@ const SideNavBar = ({
       <div className="sidebar-div">
         <button
           className="sidebar-button"
-          onClick={() => handleSelectedCategory("Strengthening")}
+          onClick={() => handleSelectedFilter("Strengthening")}
         >
           Strengthening
         </button>
@@ -59,7 +32,7 @@ const SideNavBar = ({
       <div className="sidebar-div">
         <button
           className="sidebar-button"
-          onClick={() => handleSelectedCategory("Chest Opening")}
+          onClick={() => handleSelectedFilter("Chest Opening")}
         >
           Chest Opening
         </button>
@@ -67,7 +40,7 @@ const SideNavBar = ({
       <div className="sidebar-div">
         <button
           className="sidebar-button"
-          onClick={() => handleSelectedCategory("Backbend")}
+          onClick={() => handleSelectedFilter("Backbend")}
         >
           Backbend
         </button>
@@ -76,7 +49,7 @@ const SideNavBar = ({
       <div className="sidebar-div">
         <button
           className="sidebar-button"
-          onClick={() => handleSelectedLevel("Beginner")}
+          onClick={() => handleSelectedFilter("Beginner")}
         >
           Beginner
         </button>
@@ -84,7 +57,7 @@ const SideNavBar = ({
       <div className="sidebar-div">
         <button
           className="sidebar-button"
-          onClick={() => handleSelectedLevel("Intermediate")}
+          onClick={() => handleSelectedFilter("Intermediate")}
         >
           Intermediate
         </button>
@@ -92,7 +65,7 @@ const SideNavBar = ({
       <div className="sidebar-div">
         <button
           className="sidebar-button"
-          onClick={() => handleSelectedLevel("Advanced")}
+          onClick={() => handleSelectedFilter("Advanced")}
         >
           Advanced
         </button>

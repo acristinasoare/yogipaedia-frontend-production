@@ -16,7 +16,7 @@ const PosesLibrary = ({ userId }) => {
     setSelectedFilter(filter);
   };
   const handleClearFilter = () => {
-    setSelectedCategory(null);
+    setSelectedFilter(null);
   };
 
   useEffect(() => {
@@ -32,27 +32,26 @@ const PosesLibrary = ({ userId }) => {
 
     const difficultyLevels = ["Beginner", "Intermediate", "Advanced"];
 
-		if (categories.includes(selectedFilter)) {
-			endpoint = `/poses/category/${selectedFilter}`;
-		} else if (difficultyLevels.includes(selectedFilter)) {
-			endpoint = `/poses/category/${selectedFilter}`
-		}
+    if (categories.includes(selectedFilter)) {
+      endpoint = `/poses/category/${selectedFilter}`;
+    } else if (difficultyLevels.includes(selectedFilter)) {
+      endpoint = `/poses/category/${selectedFilter}`;
+    }
 
-    axios
-      .get(endpoint)
-      .then((response) => {
-        const yogaPosesArray = response.data;
+    axios.get(endpoint).then((response) => {
+      const yogaPosesArray = response.data;
 
-        const yogaPictures = yogaPosesArray.map((pose) => [
-          pose.pose_id,
-          pose.url_png,
-          pose.pose_name,
-          pose.sanskrit_name,
-          pose.pose_benefits,
-          pose.pose_description,
-        ]);
-        setPoses(yogaPictures);
-  }, [selectedFilter])};
+      const yogaPictures = yogaPosesArray.map((pose) => [
+        pose.pose_id,
+        pose.url_png,
+        pose.pose_name,
+        pose.sanskrit_name,
+        pose.pose_benefits,
+        pose.pose_description,
+      ]);
+      setPoses(yogaPictures);
+    });
+  }, [selectedFilter]);
 
   if (alertMessage) {
     return (
@@ -78,9 +77,8 @@ const PosesLibrary = ({ userId }) => {
       </div>
       <div className="side-bar">
         <SideNavBar
-          handleSelectedCategory={handleSelectedCategory}
+          handleSelectedFilter={handleSelectedFilter}
           handleClearFilter={handleClearFilter}
-          handleSelectedLevel={handleSelectedLevel}
         />
       </div>
       <div className="poses__library">
@@ -110,6 +108,5 @@ const PosesLibrary = ({ userId }) => {
     </div>
   );
 };
-
 
 export default PosesLibrary;
