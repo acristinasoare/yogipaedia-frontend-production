@@ -1,18 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant&family=Cormorant+SC:wght@500&family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,700;1,700&family=Waterfall&display=swap");
+@import url("https://www.freepik.com/free-vector/watercolor-pastel-abstract-background_14549501.htm#page=3&query=watercolour%20background&position=29&from_view=search&track=ais");
 
 // COLOURS
 
-$background: #f5f5f4;
-$dark-text: #474844;
-$accent-one-dark: #e09592;
-$accent-one-light: #f7e6e3;
-$accent-two-dark: #577371;
-$accent-two-light: #bed2d5;
-$accent-three-contrast: #bfae4a;
+// main background
+$background-light: #f8f3f2;
+// card background
+$background-dark: #eee8e0;
+// text
+$text: #60514b;
+// favourites button
+$accent-one-dark: #eda994;
+// Dropdown menu background
+$accent-one-light: #fefcfa;
+// Clear Filter button
+$accent-three-contrast: #d1e1a4;
 
 // FONTS
 $noto-sans: "Noto Sans", sans-serif;
+$waterfall: "Waterfall", cursive;
+$cormorant: "Cormorant", serif;
+$cormorant-sc: "Cormorant SC", serif;
 
-// BUTTONS
-
-// WEIGHTS
+// STYLES
+$drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

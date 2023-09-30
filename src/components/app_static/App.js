@@ -12,45 +12,47 @@ import MyFavourites from "../user_account/MyFavourites";
 import "../../styles/app_static_sass/app.scss";
 
 const App = () => {
-  const [userId, setUserId] = useState(null);
+	const [userId, setUserId] = useState(null);
 
-  return (
-    <>
-      <UserAuthContextProvider>
-        <Routes>
-          <Route
-            path="/"
-            element={<LoginModal userId={userId} setUserId={setUserId} />}
-          />
-          <Route path="/signup" element={<SignUp />} />
-          <Route
-            path="/home"
-            element={
-              <ProtectedRoute>
-                <Home />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/poses-library"
-            element={
-              <ProtectedRoute>
-                <PosesLibrary userId={userId} />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/my-favourites"
-            element={
-              <ProtectedRoute>
-                <MyFavourites userId={userId} />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
-      </UserAuthContextProvider>
-    </>
-  );
+	return (
+		<>
+			<UserAuthContextProvider>
+				<Routes>
+					<Route
+						className="page-content__container"
+						path="/"
+						element={<LoginModal userId={userId} setUserId={setUserId} />}
+					/>
+					<Route path="/signup" element={<SignUp />} />
+					<Route
+						path="/home"
+						element={
+							<ProtectedRoute>
+								<Home />
+							</ProtectedRoute>
+						}
+					/>
+					<Route
+						path="/poses-library"
+						element={
+							<ProtectedRoute>
+								<PosesLibrary userId={userId} />
+							</ProtectedRoute>
+						}
+					/>
+					<Route
+						path="/my-favourites"
+						element={
+							<ProtectedRoute>
+								<MyFavourites userId={userId} />
+							</ProtectedRoute>
+						}
+					/>
+				</Routes>
+			</UserAuthContextProvider>
+			<div className="footer" />
+		</>
+	);
 };
 
 export default App;
