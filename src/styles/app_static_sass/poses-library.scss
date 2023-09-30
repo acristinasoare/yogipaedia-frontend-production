@@ -4,8 +4,10 @@
 	margin-left: 300px;
 	margin-right: 100px;
 	margin-top: 250px;
+
 	height: calc(100vh - 250px);
-	overflow: auto;
+	// overflow: auto;
+	overflow: hidden;
 	box-sizing: border-box;
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none;
@@ -21,11 +23,15 @@
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	gap: 20px;
+
 	padding: 10px;
+	padding-bottom: 200px;
 	overflow: auto;
+	height: auto;
+	height: calc(100vh - 250px);
 	// box-sizing: border-box;
-	// -ms-overflow-style: none; /* IE and Edge */
-	// scrollbar-width: none;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none;
 }
 
 .poses__library::-webkit-scrollbar {
@@ -48,4 +54,5 @@
 
 .pose__button {
 	border: 0px;
+	color: $text;
 }
