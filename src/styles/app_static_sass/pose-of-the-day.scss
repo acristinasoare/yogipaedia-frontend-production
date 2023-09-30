@@ -1,53 +1,55 @@
 @import "../../variables/variables.scss";
 
-.page-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 300px;
-  background-color: #e4e4e2;
+.page-content__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .pose__container {
-  display: flex;
-  align-items: center;
-  padding: 20px 135px;
-  background-color: #f7e6e3;
-  margin: 20px 200px;
-  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+	display: flex;
+	align-items: center;
+	padding: 20px 135px;
+	margin-bottom: 50px;
+	width: 80%;
+	background-color: $background-dark;
+
+	filter: drop-shadow($drop-shadow);
+	border-radius: 10px;
 }
 
 .pose-of-the-day__alert-message {
-  color: #d90966;
-  font-size: x-large;
-  font-weight: bold;
+	color: #d90966;
+	font-size: x-large;
+	font-weight: bold;
 }
 
 .pose-of-the-day {
-  font-size: small;
-  flex: 1;
-  color: black;
-  background-color: #f7e6e3;
-  padding-right: 20px;
+	font-family: $cormorant-sc;
+	font-size: small;
+	flex: 1;
+	color: $text;
+	padding-right: 20px;
 }
 
 .pose__image {
-  flex: 1;
+	flex: 1;
 
-  img {
-    max-width: 300px;
-    height: auto;
-  }
+	img {
+		max-width: 200px;
+		height: auto;
+	}
 }
 
 .pose-description__container {
-  margin: 20px 200px;
-  color: black;
-  text-align: justify;
-  border-color: 1px solid #ebc789;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: #f7e6e3;
-  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+	font-family: $noto-sans;
+	color: $text;
+	text-align: justify;
+	border-color: 1px solid #ebc789;
+	border-radius: 10px;
+	padding: 20px;
+	width: 80%;
+	background-color: $background-dark;
+	filter: drop-shadow($drop-shadow);
+	margin-bottom: 50px;
 }

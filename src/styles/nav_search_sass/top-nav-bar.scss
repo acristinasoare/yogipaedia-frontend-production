@@ -1,48 +1,48 @@
 @import "../../variables/variables.scss";
 
 .navbar-container {
-  background-color: $background;
-  overflow: visible;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  font-family: $noto-sans;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  font-size: 20px;
-  z-index: 1;
+	overflow: visible;
+	position: fixed;
+	margin-top: 30px;
+	top: 0;
+	width: 100%;
+	font-family: $noto-sans;
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+	font-size: 20px;
+	z-index: 1;
 
-  .navbar-left {
-    flex: 1;
-  }
+	.navbar-left {
+		filter: drop-shadow($drop-shadow);
+		flex: 1;
+	}
 
-  .navbar-right {
-    display: flex;
-    align-items: center;
-  }
+	.navbar-right {
+		display: flex;
+		align-items: center;
+	}
 
-  a {
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: none;
-    border-style: none;
-    color: black;
+	a {
+		text-decoration: none;
+		display: inline-block;
+		border-style: none;
+		color: $text;
+	}
 
-    img {
-      width: 300px;
-      height: auto;
-    }
-  }
-  .poses-library__link {
-    margin-right: 20px;
-    padding: 5px 20px;
-    border-radius: 10px;
-    &:hover {
-      background-color: #d1e1a4;
-      transition: 300ms;
-    }
-  }
+	.poses-library__link {
+		margin-right: 20px;
+		padding: 5px 20px;
+		border-radius: 10px;
+		font-family: $waterfall;
+		font-size: 80px;
+		color: $text;
+		filter: drop-shadow($drop-shadow);
+		&:hover {
+			color: $background-dark;
+			transition: 300ms;
+		}
+	}
 }

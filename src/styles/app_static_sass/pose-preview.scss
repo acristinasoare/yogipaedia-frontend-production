@@ -1,23 +1,30 @@
 @import "../../variables/variables.scss";
+
+.grid-item {
+	background-color: $background-dark;
+	filter: drop-shadow($drop-shadow);
+	border-radius: 10px;
+}
+
 .pose-preview__container {
-  position: relative;
+	position: relative;
 }
 
 .pose-preview__pose-button {
-  border: 0;
+	border: 0;
 }
 
 .pose-preview__favourite-button {
-  position: absolute;
-  border: 0;
-  right: 0px;
-  background-color: transparent;
+	position: absolute;
+	border: 0;
+	right: 0px;
+	background-color: transparent;
 }
 
 .pose-preview__english-name {
-  font-size: 10px;
+	font-size: 10px;
 }
 
 .pose-preview__sanskrit-name {
-  font-size: 12px;
+	font-size: 12px;
 }

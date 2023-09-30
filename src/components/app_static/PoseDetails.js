@@ -42,7 +42,9 @@ const PoseDetails = ({
 
 	return (
 		<div>
-			<Button onClick={handleOpen}>{englishName}</Button>
+			<Button className="pose__modal-button" onClick={handleOpen}>
+				{englishName}
+			</Button>
 			<Modal
 				className="pose__modal"
 				open={open}

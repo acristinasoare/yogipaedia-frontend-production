@@ -9,9 +9,9 @@ const Home = () => {
 		<>
 			<div className="top-nav-bar">
 				<TopNavBar />
-				<div className="page-content__container">
-					<PoseOfTheDay />
-				</div>
+			</div>
+			<div>
+				<PoseOfTheDay />
 			</div>
 		</>
 	);

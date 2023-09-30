@@ -3,11 +3,17 @@
 @import "../src/variables/variables.scss";
 
 body {
+	width: 100vw;
 	font-family: -apple-system, "Noto Sans", BlinkMacSystemFont, "Segoe UI",
 		"Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
 		"Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	height: fit-content;
 }
 
 code {
@@ -16,9 +22,16 @@ code {
 }
 
 :root a {
-	color: $accent-two-dark;
+	color: $text;
 	&:hover {
-		color: black;
+		color: $background-light;
 		transition: 500ms;
 	}
+}
+
+.bg-img {
+	position: fixed;
+	width: 100vw;
+	opacity: 0.4;
+	z-index: -5;
 }

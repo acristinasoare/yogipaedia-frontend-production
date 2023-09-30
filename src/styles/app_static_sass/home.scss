@@ -1,6 +1,9 @@
 @import "../../variables/variables.scss";
 
-.page-content--container {
-	margin-top: 250px;
+.page-content__container {
+	margin-top: 150px;
 	min-height: vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
