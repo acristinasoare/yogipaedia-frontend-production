@@ -1,9 +1,12 @@
 @import "../../variables/variables.scss";
 
 .page-content__container {
-  margin-top: 150px;
-  min-height: vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	max-height: calc(100vh - 250px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: auto;
+	box-sizing: border-box;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none;
 }

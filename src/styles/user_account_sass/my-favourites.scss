@@ -3,7 +3,7 @@
 .page-content__container {
 	display: flex;
 	flex-direction: column;
-	margin-top: 250px;
+	// margin-top: 250px;
 	align-items: center;
 	justify-content: center;
 	padding-right: 100px;
@@ -11,7 +11,7 @@
 	margin-right: 100px;
 	margin-bottom: 200px;
 	height: calc(100vh - 175px);
-	overflow: hidden;
+	overflow: auto;
 	box-sizing: border-box;
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none;
@@ -21,5 +21,5 @@
 	font-family: $cormorant-sc;
 	color: $text;
 	font-size: 30px;
-	margin-bottom: 0px;
+	margin-bottom: 50px;
 }

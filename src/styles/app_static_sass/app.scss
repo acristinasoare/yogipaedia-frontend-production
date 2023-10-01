@@ -1,14 +1,14 @@
 @import "../../variables/variables.scss";
 
 body {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	overflow: hidden;
-	width: vw;
-	height: vh;
+	overflow: auto;
+	width: 100vw;
+	height: 100vh;
 	align-items: center;
-	min-height: 100vh;
 }
 
 h1 {
@@ -55,22 +55,15 @@ h1 {
 	box-shadow: none;
 }
 
-.page-content__container {
-	margin-left: 40px;
-	margin-right: 40px;
-	margin-top: 250px;
-	height: calc(vh - 250px);
-	width: vw;
-	display: flex;
-	align-items: center;
-	justify-items: center;
-}
+// .page-content__container {
+// 	// margin-top: 250px;
+// 	// height: calc(vh - 250px);
+// 	width: vw;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-items: center;
+// }
 
 .top-nav-bar {
-	width: 100vw;
-}
-
-.footer {
-	height: 200px;
 	width: 100vw;
 }
