@@ -6,20 +6,35 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	max-height: calc(100vh - 100px);
+	height: fit-content;
 
-	overflow: hidden;
+	overflow: auto;
+	box-sizing: border-box;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none;
+}
+
+.page-content__container::-webkit-scrollbar {
+	display: none;
 }
 
 .pose__container {
 	display: flex;
 	align-items: center;
-	padding: 20px 135px;
+	padding: 0px 135px;
 	margin-bottom: 50px;
 	width: 80%;
+	height: 300px;
 	background-color: $background-dark;
 	filter: drop-shadow($drop-shadow);
 	border-radius: 10px;
+	overflow: auto;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none;
+}
+
+.pose__container::-webkit-scrollbar {
+	display: none;
 }
 
 .pose-of-the-day__alert-message {
@@ -40,8 +55,8 @@
 	flex: 1;
 
 	img {
-		max-width: 200px;
-		height: auto;
+		max-width: auto;
+		max-height: 180px;
 	}
 }
 
