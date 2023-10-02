@@ -8,7 +8,6 @@ import SignUp from "../authorisation/SignUp";
 import Home from "./Home";
 import PosesLibrary from "./PosesLibrary";
 import MyFavourites from "../user_account/MyFavourites";
-import Footer from "./Footer";
 
 import "../../styles/app_static_sass/app.scss";
 
