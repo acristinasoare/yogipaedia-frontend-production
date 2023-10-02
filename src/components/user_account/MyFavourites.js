@@ -4,17 +4,17 @@ import MyPoses from "./MyPoses";
 import Footer from "../app_static/Footer";
 import "../../styles/user_account_sass/my-favourites.scss";
 
-const MyFavourites = ({ userId }) => {
+const MyFavourites = ({ userId, currentUser }) => {
 	return (
 		<div>
 			<div className="top-nav-bar">
-				<TopNavBar />
+				<TopNavBar userId={userId} currentUser={currentUser} />
 			</div>
 			<div className="page-content__container">
 				<div className="page-content__title">
 					<h2 className="title-text">My Favourite Poses</h2>
 				</div>
-				<MyPoses userId={userId} />
+				<MyPoses userId={userId} currentUser={currentUser} />
 			</div>
 			<Footer />
 		</div>

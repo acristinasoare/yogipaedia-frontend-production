@@ -3,8 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { useUserAuth } from "../../context/UserAuthContext";
+import { auth } from "../../config/firebase";
 
-const Signup = () => {
+const Signup = ({ setUserId, userId, currentUser, setCurrentUser }) => {
 	const [email, setEmail] = useState("");
 	const [error, setError] = useState("");
 	const [password, setPassword] = useState("");
@@ -16,7 +17,13 @@ const Signup = () => {
 		setError("");
 		try {
 			await signUp(email, password);
-			navigate("/");
+			setUserId(auth.currentUser.uid);
+			navigate("/home");
+			localStorage.setItem("currentUser", auth.currentUser.uid);
+			setCurrentUser(localStorage.getItem("currentUser"));
+			console.log(`Login current user is ${currentUser}`);
+			setUserId(auth.currentUser.uid);
+			console.log(`login user id is ${userId}`);
 		} catch (err) {
 			setError(err.message);
 		}

@@ -12,7 +12,8 @@ import MyFavourites from "../user_account/MyFavourites";
 import "../../styles/app_static_sass/app.scss";
 
 const App = () => {
-	const [userId, setUserId] = useState(null);
+	const [userId, setUserId] = useState("");
+	const [currentUser, setCurrentUser] = useState("");
 
 	return (
 		<>
@@ -21,14 +22,31 @@ const App = () => {
 					<Route
 						className="page-content__container"
 						path="/"
-						element={<LoginModal userId={userId} setUserId={setUserId} />}
+						element={
+							<LoginModal
+								userId={userId}
+								setUserId={setUserId}
+								currentUser={currentUser}
+								setCurrentUser={setCurrentUser}
+							/>
+						}
 					/>
-					<Route path="/signup" element={<SignUp />} />
+					<Route
+						path="/signup"
+						element={
+							<SignUp
+								userId={userId}
+								setUserId={setUserId}
+								currentUser={currentUser}
+								setCurrentUser={setCurrentUser}
+							/>
+						}
+					/>
 					<Route
 						path="/home"
 						element={
 							<ProtectedRoute>
-								<Home />
+								<Home userId={userId} currentUser={currentUser} />
 							</ProtectedRoute>
 						}
 					/>
@@ -36,7 +54,7 @@ const App = () => {
 						path="/poses-library"
 						element={
 							<ProtectedRoute>
-								<PosesLibrary userId={userId} />
+								<PosesLibrary userId={userId} currentUser={currentUser} />
 							</ProtectedRoute>
 						}
 					/>
@@ -44,7 +62,7 @@ const App = () => {
 						path="/my-favourites"
 						element={
 							<ProtectedRoute>
-								<MyFavourites userId={userId} />
+								<MyFavourites userId={userId} currentUser={currentUser} />
 							</ProtectedRoute>
 						}
 					/>

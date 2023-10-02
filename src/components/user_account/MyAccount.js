@@ -7,11 +7,11 @@ import LogOut from "../authorisation/LogOut";
 
 import "../../styles/user_account_sass/my-account.scss";
 
-const MyAccount = () => {
+const MyAccount = ({ userId, currentUser }) => {
 	return (
 		<div>
 			<div className="top-nav-bar">
-				<TopNavBar />
+				<TopNavBar userId={userId} currentUser={currentUser} />
 			</div>
 			<div className="page-content__container">
 				<div>
@@ -21,7 +21,7 @@ const MyAccount = () => {
 					<Link to="/my-flows">My saved flows</Link>
 				</div>
 				<div>
-					<LogOut />
+					<LogOut userId={userId} currentUser={currentUser} />
 				</div>
 			</div>
 		</div>

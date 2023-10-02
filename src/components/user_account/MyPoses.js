@@ -5,7 +5,7 @@ import PosePreview from "../app_static/PosePreview";
 import "../../styles/user_account_sass/my-poses.scss";
 import FavouriteButton from "../app_static/FavouriteButton";
 
-const MyPoses = ({ userId }) => {
+const MyPoses = ({ userId, currentUser }) => {
 	const [poses, setPoses] = useState([]);
 	const [alertMessage, setAlertMessage] = useState(null);
 
@@ -39,9 +39,15 @@ const MyPoses = ({ userId }) => {
 			<div className="poses__container">
 				{poses.map((pose, index) => (
 					<div className="grid-item" key={index} onClick={() => {}}>
-						<FavouriteButton userId={userId} poseId={pose.pose_id} />
+						<FavouriteButton
+							userId={userId}
+							poseId={pose.pose_id}
+							currentUser={currentUser}
+						/>
 						<PosePreview
 							poseId={pose.pose_id}
+							userId={userId}
+							currentUser={currentUser}
 							poseImage={pose.url_png}
 							englishName={pose.pose_name}
 							sanskritName={pose.sanskrit_name}

@@ -5,7 +5,7 @@ import "../../styles/nav_search_sass/nav-menu.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../context/UserAuthContext";
 
-const NavMenu = () => {
+const NavMenu = ({ userId, currentUser }) => {
 	const { logOut, unsubscribe } = useUserAuth();
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const handleDropdown = () => {

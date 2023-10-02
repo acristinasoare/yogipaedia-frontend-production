@@ -8,7 +8,7 @@ import FavouriteButton from "./FavouriteButton";
 import Alert from "./Alert";
 import Footer from "./Footer";
 
-const PosesLibrary = ({ userId }) => {
+const PosesLibrary = ({ currentUser, userId }) => {
 	const [poses, setPoses] = useState([]);
 	const [selectedFilter, setSelectedFilter] = useState(null);
 	const [alertMessage, setAlertMessage] = useState(null);
@@ -19,6 +19,10 @@ const PosesLibrary = ({ userId }) => {
 	const handleClearFilter = () => {
 		setSelectedFilter(null);
 	};
+
+	// const currentUser = localStorage.getItem("currentUser");
+	console.log(`pl.js current user is ${currentUser}`);
+	console.log(`pl.js userId is ${userId}`);
 
 	useEffect(() => {
 		let endpoint = "/poses";
@@ -60,7 +64,7 @@ const PosesLibrary = ({ userId }) => {
 		return (
 			<div>
 				<div className="top-nav-bar">
-					<TopNavBar />
+					<TopNavBar userId={userId} currentUser={currentUser} />
 				</div>
 				<SideNavBar
 					handleSelectedFilter={handleSelectedFilter}
@@ -91,11 +95,13 @@ const PosesLibrary = ({ userId }) => {
 							<div className="grid-item" key={index} onClick={() => {}}>
 								<FavouriteButton
 									className="grid-item__button"
+									currentUser={currentUser}
 									userId={userId}
 									poseId={pose[0]}
 								/>
 								<PosePreview
 									className="grid-item__pose"
+									currentUser={currentUser}
 									userId={userId}
 									poseId={pose[0]}
 									poseImage={pose[1]}
