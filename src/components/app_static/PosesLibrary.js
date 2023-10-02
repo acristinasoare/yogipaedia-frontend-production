@@ -27,7 +27,7 @@ const PosesLibrary = ({ userId }) => {
 			"Core",
 			"Seated",
 			"Backbend",
-			"Strenghtening",
+			"Strengthening",
 			"Chest Opening",
 		];
 		const difficultyLevels = ["Beginner", "Intermediate", "Advanced"];
