@@ -6,14 +6,9 @@ const TopNavBar = ({ userId, currentUser }) => {
 	return (
 		<nav className="navbar-container">
 			<div className="navbar-left">
-				<a
-					className="navbar-container__logo--link"
-					href="/home"
-					userId={userId}
-					currentUser={currentUser}
-				>
+				<Link to="/home">
 					<img src="Logo.png" alt="yogipedia-logo" />
-				</a>
+				</Link>
 			</div>
 			<div className="navbar-right">
 				<div className="poses-library__link">
