@@ -20,7 +20,7 @@ const NavMenu = ({ userId, currentUser }) => {
 
 	const handleDelete = () => {
 		unsubscribe();
-		navigate("https://yogipaedia-bj0y.onrender.com/");
+		navigate("https://yogipaedia.onrender.com");
 	};
 
 	return (
@@ -36,14 +36,14 @@ const NavMenu = ({ userId, currentUser }) => {
 				<div className="dropdown-content">
 					<ul>
 						<li className="dropdown-content__item">
-							<Link to="https://yogipaedia-bj0y.onrender.com/my-favourites">
+							<Link to="https://yogipaedia.onrender.com/my-favourites">
 								My Favourites
 							</Link>
 						</li>
 
 						<li className="dropdown-content__item">
 							<Link
-								to="https://yogipaedia-bj0y.onrender.com/"
+								to="https://yogipaedia.onrender.com/"
 								onClick={handleLogOut}
 							>
 								Log out
@@ -51,7 +51,7 @@ const NavMenu = ({ userId, currentUser }) => {
 						</li>
 						<li className="dropdown-content__item">
 							<Link
-								to="https://yogipaedia-bj0y.onrender.com/"
+								to="https://yogipaedia.onrender.com/"
 								onClick={handleDelete}
 							>
 								Delete my account

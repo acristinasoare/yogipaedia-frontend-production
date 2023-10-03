@@ -15,12 +15,12 @@ const MyAccount = ({ userId, currentUser }) => {
 			</div>
 			<div className="page-content__container">
 				<div>
-					<Link to="https://yogipaedia-bj0y.onrender.com/poses-library">
+					<Link to="https://yogipaedia.onrender.com/poses-library">
 						My saved poses
 					</Link>
 				</div>
 				<div>
-					<Link to="https://yogipaedia-bj0y.onrender.com/my-flows">
+					<Link to="https://yogipaedia.onrender.com/my-flows">
 						My saved flows
 					</Link>
 				</div>

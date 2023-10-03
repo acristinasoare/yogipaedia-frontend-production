@@ -21,7 +21,7 @@ const App = () => {
 				<Routes>
 					<Route
 						className="page-content__container"
-						path="https://yogipaedia-bj0y.onrender.com/"
+						path="https://yogipaedia.onrender.com.com/"
 						element={
 							<LoginModal
 								userId={userId}
@@ -32,7 +32,7 @@ const App = () => {
 						}
 					/>
 					<Route
-						path="https://yogipaedia-bj0y.onrender.com/signup"
+						path="https://yogipaedia.onrender.com/signup"
 						element={
 							<SignUp
 								userId={userId}
@@ -43,7 +43,7 @@ const App = () => {
 						}
 					/>
 					<Route
-						path="https://yogipaedia-bj0y.onrender.com/home"
+						path="https://yogipaedia.onrender.com/home"
 						element={
 							<ProtectedRoute>
 								<Home userId={userId} currentUser={currentUser} />
@@ -51,7 +51,7 @@ const App = () => {
 						}
 					/>
 					<Route
-						path="https://yogipaedia-bj0y.onrender.com/poses-library"
+						path="https://yogipaedia.onrender.com/poses-library"
 						element={
 							<ProtectedRoute>
 								<PosesLibrary userId={userId} currentUser={currentUser} />
@@ -59,7 +59,7 @@ const App = () => {
 						}
 					/>
 					<Route
-						path="https://yogipaedia-bj0y.onrender.com/my-favourites"
+						path="https://yogipaedia.onrender.com/my-favourites"
 						element={
 							<ProtectedRoute>
 								<MyFavourites userId={userId} currentUser={currentUser} />

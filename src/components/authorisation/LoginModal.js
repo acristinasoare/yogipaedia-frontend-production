@@ -19,7 +19,7 @@ const LoginModal = ({ setUserId, userId, currentUser, setCurrentUser }) => {
 		try {
 			await logIn(email, password);
 			setUserId(auth.currentUser.uid);
-			navigate("https://yogipaedia-bj0y.onrender.com/home");
+			navigate("https://yogipaedia.onrender.com/home");
 			localStorage.setItem("currentUser", auth.currentUser.uid);
 			setCurrentUser(localStorage.getItem("currentUser"));
 			console.log(`Login current user is ${currentUser}`);
@@ -34,7 +34,7 @@ const LoginModal = ({ setUserId, userId, currentUser, setCurrentUser }) => {
 		e.preventDefault();
 		try {
 			await googleSignIn();
-			navigate("https://yogipaedia-bj0y.onrender.com/home");
+			navigate("https://yogipaedia.onrender.com/home");
 			localStorage.setItem("currentUser", auth.currentUser.uid);
 			setCurrentUser(localStorage.getItem("currentUser"));
 			console.log(`Login current user is ${currentUser}`);

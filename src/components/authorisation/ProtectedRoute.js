@@ -7,7 +7,7 @@ const ProtectedRoute = ({ children }) => {
 
 	console.log("Check user in Private: ", user);
 	if (!user) {
-		return <Navigate to="https://yogipaedia-bj0y.onrender.com/" />;
+		return <Navigate to="https://yogipaedia.onrender.com/" />;
 	}
 	return children;
 };
