@@ -22,9 +22,8 @@ const LoginModal = ({ setUserId, userId, currentUser, setCurrentUser }) => {
 			navigate("/home");
 			localStorage.setItem("currentUser", auth.currentUser.uid);
 			setCurrentUser(localStorage.getItem("currentUser"));
-			console.log(`Login current user is ${currentUser}`);
+
 			setUserId(auth.currentUser.uid);
-			console.log(`login user id is ${userId}`);
 		} catch (err) {
 			setError(err.message);
 		}
@@ -37,9 +36,8 @@ const LoginModal = ({ setUserId, userId, currentUser, setCurrentUser }) => {
 			navigate("/home");
 			localStorage.setItem("currentUser", auth.currentUser.uid);
 			setCurrentUser(localStorage.getItem("currentUser"));
-			console.log(`Login current user is ${currentUser}`);
+
 			setUserId(auth.currentUser.uid);
-			console.log(`login user id is ${userId}`);
 		} catch (error) {
 			console.log(error.message);
 		}

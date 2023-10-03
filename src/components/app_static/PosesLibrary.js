@@ -20,10 +20,6 @@ const PosesLibrary = ({ currentUser, userId }) => {
 		setSelectedFilter(null);
 	};
 
-	// const currentUser = localStorage.getItem("currentUser");
-	console.log(`pl.js current user is ${currentUser}`);
-	console.log(`pl.js userId is ${userId}`);
-
 	useEffect(() => {
 		let endpoint = "https://yogipaedia-bj0y.onrender.com/poses";
 

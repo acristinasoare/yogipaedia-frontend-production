@@ -6,9 +6,6 @@ import Footer from "./Footer";
 import "../../styles/app_static_sass/home.scss";
 
 const Home = ({ currentUser, userId }) => {
-	console.log(`home.js current user is ${currentUser}`);
-	console.log(`home.js userId is ${userId}`);
-
 	return (
 		<>
 			<div className="top-nav-bar">

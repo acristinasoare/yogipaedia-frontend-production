@@ -16,10 +16,6 @@ const PosePreview = ({
 	poseDescription,
 	poseLevel,
 }) => {
-	// const currentUser = localStorage.getItem("currentUser");
-
-	console.log(`pose preview current user is ${currentUser}`);
-	console.log(`pose preview userId is ${userId}`);
 	return (
 		<div className="pose-preview__container">
 			<img className="pose-preview__image" src={poseImage} alt="yoga-pose" />

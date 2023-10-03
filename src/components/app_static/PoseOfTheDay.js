@@ -10,10 +10,6 @@ const PoseOfTheDay = ({ currentUser, userId }) => {
 	const [poseName, setPoseName] = useState(null);
 	const [alertMessage, setAlertMessage] = useState(null);
 
-	// const currentUser = localStorage.getItem("currentUser");
-	console.log(`potd.js current user is ${currentUser}`);
-	console.log(`potd.js userId is ${userId}`);
-
 	useEffect(() => {
 		const lastGeneratedDate = localStorage.getItem("lastGeneratedDate");
 		const currentDate = new Date().toDateString();
