@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PoseOfTheDay from "./PoseOfTheDay";
 import TopNavBar from "../nav_and_search/TopNavBar";
 import Footer from "./Footer";

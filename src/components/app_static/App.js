@@ -21,7 +21,7 @@ const App = () => {
 				<Routes>
 					<Route
 						className="page-content__container"
-						path="https://yogipaedia.onrender.com.com/"
+						path="https://yogipaedia.onrender.com/"
 						element={
 							<LoginModal
 								userId={userId}
