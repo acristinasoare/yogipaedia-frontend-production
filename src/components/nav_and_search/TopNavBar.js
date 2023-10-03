@@ -6,15 +6,13 @@ const TopNavBar = ({ userId, currentUser }) => {
 	return (
 		<nav className="navbar-container">
 			<div className="navbar-left">
-				<Link to="https://yogipaedia.onrender.com/home">
+				<Link to="/home">
 					<img src="Logo.png" alt="yogipedia-logo" />
 				</Link>
 			</div>
 			<div className="navbar-right">
 				<div className="poses-library__link">
-					<Link to="https://yogipaedia.onrender.com/poses-library">
-						Poses Library
-					</Link>
+					<Link to="/poses-library">Poses Library</Link>
 				</div>
 				<NavMenu userId={userId} currentUser={currentUser} />
 			</div>

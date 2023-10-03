@@ -18,7 +18,7 @@ const Signup = ({ setUserId, userId, currentUser, setCurrentUser }) => {
 		try {
 			await signUp(email, password);
 			setUserId(auth.currentUser.uid);
-			navigate("https://yogipaedia.onrender.com/home");
+			navigate("/home");
 			localStorage.setItem("currentUser", auth.currentUser.uid);
 			setCurrentUser(localStorage.getItem("currentUser"));
 			console.log(`Login current user is ${currentUser}`);
@@ -60,8 +60,7 @@ const Signup = ({ setUserId, userId, currentUser, setCurrentUser }) => {
 					</Form>
 				</div>
 				<div className="p-4 box mt-3 text-center">
-					Already have an account?{" "}
-					<Link to="https://yogipaedia.onrender.com/">Log In</Link>
+					Already have an account? <Link to="/">Log In</Link>
 				</div>
 			</div>
 		</>

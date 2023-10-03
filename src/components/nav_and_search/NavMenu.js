@@ -15,12 +15,12 @@ const NavMenu = ({ userId, currentUser }) => {
 
 	const handleLogOut = () => {
 		logOut();
-		navigate("https://yogipaedia-bj0y.onrender.com/");
+		navigate("/");
 	};
 
 	const handleDelete = () => {
 		unsubscribe();
-		navigate("https://yogipaedia.onrender.com");
+		navigate("/");
 	};
 
 	return (
@@ -36,24 +36,16 @@ const NavMenu = ({ userId, currentUser }) => {
 				<div className="dropdown-content">
 					<ul>
 						<li className="dropdown-content__item">
-							<Link to="https://yogipaedia.onrender.com/my-favourites">
-								My Favourites
-							</Link>
+							<Link to="/my-favourites">My Favourites</Link>
 						</li>
 
 						<li className="dropdown-content__item">
-							<Link
-								to="https://yogipaedia.onrender.com/"
-								onClick={handleLogOut}
-							>
+							<Link to="/" onClick={handleLogOut}>
 								Log out
 							</Link>
 						</li>
 						<li className="dropdown-content__item">
-							<Link
-								to="https://yogipaedia.onrender.com/"
-								onClick={handleDelete}
-							>
+							<Link to="/" onClick={handleDelete}>
 								Delete my account
 							</Link>
 						</li>
