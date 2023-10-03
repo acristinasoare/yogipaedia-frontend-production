@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "## Engineers",
 	"main": "index.js",
-	"proxy": "https://yogipaedia-backend.onrender.com/",
+	"proxy": "https://yogipaedia.onrender.com/",
 	"private": true,
 	"dependencies": {
 		"@emotion/react": "^11.11.1",
@@ -64,7 +64,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/HollyJM81/yogipaediaFrontendProduction.git"
+		"url": "https://github.com/HollyJM81/yogipaediaFrontendProduction.git"
 	},
 	"author": "",
 	"license": "ISC",
