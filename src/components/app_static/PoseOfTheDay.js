@@ -18,6 +18,8 @@ const PoseOfTheDay = ({ currentUser, userId }) => {
 			axios
 				.get("https://yogipaedia-bj0y.onrender.com/poses")
 				.then((response) => {
+					console.log(response);
+					console.log(response.data);
 					const yogaPosesArray = response.data;
 					console.log(yogaPosesArray);
 					const randomIndex = Math.floor(Math.random() * yogaPosesArray.length);
