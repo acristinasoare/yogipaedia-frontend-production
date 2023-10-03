@@ -20,7 +20,7 @@ const PoseOfTheDay = ({ currentUser, userId }) => {
 
 		if (lastGeneratedDate === currentDate) {
 			axios
-				.get("/poses")
+				.get("https://yogipaedia-bj0y.onrender.com/poses")
 				.then((response) => {
 					const yogaPosesArray = response.data;
 

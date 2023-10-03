@@ -25,7 +25,7 @@ const PosesLibrary = ({ currentUser, userId }) => {
 	console.log(`pl.js userId is ${userId}`);
 
 	useEffect(() => {
-		let endpoint = "/poses";
+		let endpoint = "https://yogipaedia-bj0y.onrender.com/poses";
 
 		const categories = [
 			"Core",
@@ -37,9 +37,9 @@ const PosesLibrary = ({ currentUser, userId }) => {
 		const difficultyLevels = ["Beginner", "Intermediate", "Advanced"];
 
 		if (categories.includes(selectedFilter)) {
-			endpoint = `/poses/category/${selectedFilter}`;
+			endpoint = `https://yogipaedia-bj0y.onrender.com/poses/category/${selectedFilter}`;
 		} else if (difficultyLevels.includes(selectedFilter)) {
-			endpoint = `/poses/level/${selectedFilter}`;
+			endpoint = `https://yogipaedia-bj0y.onrender.com/poses/level/${selectedFilter}`;
 		}
 
 		axios

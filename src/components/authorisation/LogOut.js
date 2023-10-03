@@ -9,7 +9,7 @@ const LogOut = () => {
 	const handleLogout = async () => {
 		try {
 			await logOut();
-			navigate("/");
+			navigate("https://yogipaedia-bj0y.onrender.com/");
 		} catch (error) {
 			console.log(error.message);
 		}

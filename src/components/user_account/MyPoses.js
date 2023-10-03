@@ -11,7 +11,7 @@ const MyPoses = ({ userId, currentUser }) => {
 
 	useEffect(() => {
 		const currentUser = localStorage.getItem("currentUser");
-		let endpoint = `/favourites/${currentUser}`;
+		let endpoint = `https://yogipaedia-bj0y.onrender.com/favourites/${currentUser}`;
 
 		axios
 			.get(endpoint)
