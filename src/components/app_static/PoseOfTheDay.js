@@ -19,7 +19,7 @@ const PoseOfTheDay = ({ currentUser, userId }) => {
 				.get("https://yogipaedia-bj0y.onrender.com/poses")
 				.then((response) => {
 					const yogaPosesArray = response.data;
-
+					console.log(yogaPosesArray);
 					const randomIndex = Math.floor(Math.random() * yogaPosesArray.length);
 					const randomPose = yogaPosesArray[randomIndex];
 					const randomImageUrl = randomPose.url_png;
