@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "## Engineers",
 	"main": "index.js",
-	"proxy": "http://localhost:4001/",
+	"proxy": "https://yogipaedia-backend.onrender.com",
 	"private": true,
 	"dependencies": {
 		"@emotion/react": "^11.11.1",
@@ -31,8 +31,8 @@
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"start": "node /src/index.js",
+		"build": "npm run build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
