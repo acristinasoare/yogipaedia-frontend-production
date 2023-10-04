@@ -10,8 +10,8 @@ const MyPoses = ({ userId, currentUser }) => {
 	const [alertMessage, setAlertMessage] = useState(null);
 
 	useEffect(() => {
-		const currentUser = localStorage.getItem("currentUser");
-		let endpoint = `https://yogipaedia-bj0y.onrender.com/favourites/${currentUser}`;
+		// const currentUser = localStorage.getItem("currentUser");
+		let endpoint = `https://yogipaedia-bj0y.onrender.com/favourites/${userId}`;
 
 		axios
 			.get(endpoint)
