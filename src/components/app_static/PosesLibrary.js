@@ -84,31 +84,32 @@ const PosesLibrary = ({ currentUser, userId }) => {
 					handleClearFilter={handleClearFilter}
 				/>
 			</div>
-
-			<div className="poses__library">
-				<div className="poses__container">
-					{poses.map((pose, index) => (
-						<div className="grid-item" key={index} onClick={() => {}}>
-							<FavouriteButton
-								className="grid-item__button"
-								currentUser={currentUser}
-								userId={userId}
-								poseId={pose[0]}
-							/>
-							<PosePreview
-								className="grid-item__pose"
-								currentUser={currentUser}
-								userId={userId}
-								poseId={pose[0]}
-								poseImage={pose[1]}
-								englishName={pose[2]}
-								sanskritName={pose[3]}
-								poseBenefits={pose[4]}
-								poseDescription={pose[5]}
-								poseLevel={pose[6]}
-							/>
-						</div>
-					))}
+			<div className="page-content__container">
+				<div className="poses__library">
+					<div className="poses__container">
+						{poses.map((pose, index) => (
+							<div className="grid-item" key={index} onClick={() => {}}>
+								<FavouriteButton
+									className="grid-item__button"
+									currentUser={currentUser}
+									userId={userId}
+									poseId={pose[0]}
+								/>
+								<PosePreview
+									className="grid-item__pose"
+									currentUser={currentUser}
+									userId={userId}
+									poseId={pose[0]}
+									poseImage={pose[1]}
+									englishName={pose[2]}
+									sanskritName={pose[3]}
+									poseBenefits={pose[4]}
+									poseDescription={pose[5]}
+									poseLevel={pose[6]}
+								/>
+							</div>
+						))}
+					</div>
 				</div>
 			</div>
 			<Footer />
