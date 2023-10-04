@@ -1,6 +1,6 @@
 @import "../../variables/variables.scss";
 
-.poses__library {
+.poses-library {
 	top: 300px;
 	display: flex;
 	flex-direction: column;
@@ -17,7 +17,7 @@
 	scrollbar-width: none;
 }
 
-.poses__library::-webkit-scrollbar {
+.poses-library::-webkit-scrollbar {
 	display: none;
 }
 

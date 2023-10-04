@@ -84,19 +84,22 @@ const PosesLibrary = ({ currentUser, userId }) => {
 					handleClearFilter={handleClearFilter}
 				/>
 			</div>
-
-			<div className="poses__library">
+			<div className="poses-library">
 				<div className="poses__container">
 					{poses.map((pose, index) => (
-						<div className="grid-item" key={index} onClick={() => {}}>
+						<div
+							className="pose-preview__grid-item"
+							key={index}
+							onClick={() => {}}
+						>
 							<FavouriteButton
-								className="grid-item__button"
+								className="pose-preview__grid-item--button"
 								currentUser={currentUser}
 								userId={userId}
 								poseId={pose[0]}
 							/>
 							<PosePreview
-								className="grid-item__pose"
+								className="pose-preview__grid-item--pose"
 								currentUser={currentUser}
 								userId={userId}
 								poseId={pose[0]}
