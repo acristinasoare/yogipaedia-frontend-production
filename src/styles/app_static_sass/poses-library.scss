@@ -10,7 +10,7 @@
 	margin-right: 300px;
 	margin-left: 300px;
 
-	height: calc(100vh - 150px);
+	height: calc(100vh - 300px);
 	overflow: auto;
 	box-sizing: border-box;
 	-ms-overflow-style: none; /* IE and Edge */
@@ -29,14 +29,15 @@
 }
 .poses__container {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(auto-fill, minmax(min(10rem, 100%), 1fr));
 	gap: 20px;
 
 	padding: 10px;
 
 	overflow: auto;
 	height: auto;
-	margin-bottom: 30px;
+	min-width: 60vw;
+	// margin-bottom: 30px;
 
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none;
@@ -52,21 +53,17 @@
 	align-items: center;
 	border: 0;
 	padding: 10px;
-	height: 100%;
-	width: auto;
+	padding-bottom: 30px;
+	max-width: 150px;
+	height: fit-content;
 	background-color: $background-dark;
 	filter: drop-shadow($drop-shadow);
 	border-radius: 10px;
-	// height: fit-content;
 }
 
 .pose-preview__grid-item img {
 	padding: 5px;
 	display: flex;
-	width: auto;
-	height: 100px;
-	max-width: auto;
-}
-
-.pose-preview__grid-item--button {
+	max-width: 120px;
+	height: auto;
 }

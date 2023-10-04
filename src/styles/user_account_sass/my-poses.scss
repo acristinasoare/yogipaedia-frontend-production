@@ -10,7 +10,7 @@
 	margin-right: 300px;
 	margin-left: 300px;
 
-	max-height: calc(100vh - 150px);
+	max-height: calc(100vh - 300px);
 	overflow: auto;
 	box-sizing: border-box;
 	-ms-overflow-style: none; /* IE and Edge */
@@ -29,14 +29,14 @@
 }
 .my-poses__container {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(auto-fill, minmax(min(10rem, 100%), 1fr));
 	gap: 20px;
 
 	padding: 10px;
 
 	overflow: auto;
 	height: auto;
-	margin-bottom: 30px;
+	min-width: 60vw;
 
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none;
@@ -52,21 +52,17 @@
 	align-items: center;
 	border: 0;
 	padding: 10px;
-	height: 100%;
-	width: auto;
+	padding-bottom: 30px;
+	max-width: 150px;
+	height: fit-content;
 	background-color: $background-dark;
 	filter: drop-shadow($drop-shadow);
 	border-radius: 10px;
-	// height: fit-content;
 }
 
 .my-poses__grid-item img {
 	padding: 5px;
 	display: flex;
-	width: auto;
-	height: 100px;
-	max-width: auto;
-}
-
-.my-poses__grid-item--button {
+	height: auto;
+	max-width: 120px;
 }
