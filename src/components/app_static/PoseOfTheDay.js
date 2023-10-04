@@ -14,7 +14,7 @@ const PoseOfTheDay = ({ userId }) => {
 		const lastGeneratedDate = localStorage.getItem("lastGeneratedDate");
 		const currentDate = new Date().toDateString();
 
-		if (lastGeneratedDate === currentDate) {
+		if (lastGeneratedDate !== currentDate) {
 			axios
 				.get("https://yogipaedia-bj0y.onrender.com/poses")
 				.then((response) => {
