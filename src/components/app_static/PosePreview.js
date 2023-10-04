@@ -15,6 +15,7 @@ const PosePreview = ({
 	poseDescription,
 	poseLevel,
 }) => {
+	console.log(userId);
 	return (
 		<div className="pose-preview__container">
 			<img className="pose-preview__image" src={poseImage} alt="yoga-pose" />
