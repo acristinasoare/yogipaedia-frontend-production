@@ -11,9 +11,9 @@ const MyAccount = ({ userId, currentUser }) => {
 	return (
 		<div>
 			<div className="top-nav-bar">
-				<TopNavBar userId={userId} currentUser={currentUser} />
+				<TopNavBar userId={userId} />
 			</div>
-			<div className="page-content__container">
+			<div className="my-account__container">
 				<div>
 					<Link to="/poses-library">My saved poses</Link>
 				</div>
@@ -21,7 +21,7 @@ const MyAccount = ({ userId, currentUser }) => {
 					<Link to="/my-flows">My saved flows</Link>
 				</div>
 				<div>
-					<LogOut userId={userId} currentUser={currentUser} />
+					<LogOut userId={userId} />
 				</div>
 			</div>
 		</div>

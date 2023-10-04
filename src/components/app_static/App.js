@@ -20,7 +20,6 @@ const App = () => {
 			<UserAuthContextProvider>
 				<Routes>
 					<Route
-						className="page-content__container"
 						path="/"
 						element={
 							<LoginModal

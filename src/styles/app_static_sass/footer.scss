@@ -1,10 +1,12 @@
 @import "../../variables/variables.scss";
 
 .footer {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
-	height: 30px;
-	margin: auto;
+	// height: 50px;
+	padding-top: 20px;
+	padding-bottom: 40px;
+	margin-top: 50px;
 	width: 100vw;
 }
 
@@ -15,6 +17,8 @@
 	font-weight: 300;
 	opacity: 0.6;
 	color: $text;
+	// padding-top: 20px;
+
 	margin: auto;
 	width: 25%;
 	left: 50%;

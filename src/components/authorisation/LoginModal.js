@@ -22,7 +22,6 @@ const LoginModal = ({ setUserId, userId, currentUser, setCurrentUser }) => {
 			navigate("/home");
 			localStorage.setItem("currentUser", auth.currentUser.uid);
 			setCurrentUser(localStorage.getItem("currentUser"));
-
 			setUserId(auth.currentUser.uid);
 		} catch (err) {
 			setError(err.message);
@@ -45,7 +44,7 @@ const LoginModal = ({ setUserId, userId, currentUser, setCurrentUser }) => {
 
 	return (
 		<>
-			<div className="page-content__container">
+			<div className="login-modal__container">
 				<div className="p-4 box">
 					<h2 className="mb-3"> Yogipaedia App Auth </h2>
 					{error && <Alert variant="danger">{error}</Alert>}

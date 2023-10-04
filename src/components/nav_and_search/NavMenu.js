@@ -36,7 +36,9 @@ const NavMenu = ({ userId, currentUser }) => {
 				<div className="dropdown-content">
 					<ul>
 						<li className="dropdown-content__item">
-							<Link to="/my-favourites">My Favourites</Link>
+							<Link to="/my-favourites" userId={userId}>
+								My Favourites
+							</Link>
 						</li>
 
 						<li className="dropdown-content__item">

@@ -1,50 +1,50 @@
 @import "../../variables/variables.scss";
 
 .navbar-container {
-  overflow: visible;
-  position: fixed;
-  margin-top: 30px;
-  top: 0;
-  width: 100%;
-  font-family: $noto-sans;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  z-index: 1;
+	overflow: visible;
+	position: fixed;
+	margin-top: 30px;
+	top: 0;
+	width: 100%;
+	font-family: $noto-sans;
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+	z-index: 1;
 
-  .navbar-left {
-    filter: drop-shadow($drop-shadow);
-    flex: 1;
-  }
+	.navbar-left {
+		filter: drop-shadow($drop-shadow);
+		flex: 1;
+	}
 
-  .navbar-right {
-    display: flex;
-    align-items: center;
-  }
+	.navbar-right {
+		display: flex;
+		align-items: center;
+	}
 
-  a {
-    text-decoration: none;
-    display: inline-block;
-    border-style: none;
-    color: $text;
-    img {
-      width: 300px;
-    }
-  }
+	a {
+		text-decoration: none;
+		display: inline-block;
+		border-style: none;
+		color: $text;
+		img {
+			width: 300px;
+		}
+	}
 
-  .poses-library__link {
-    margin-right: 20px;
-    padding: 5px 20px;
-    border-radius: 10px;
-    font-family: $waterfall;
-    font-size: 65px;
-    color: $text;
-    filter: drop-shadow($drop-shadow);
-    &:hover {
-      color: $background-dark;
-      transition: 300ms;
-    }
-  }
+	.poses-library__link {
+		margin-right: 20px;
+		padding: 5px 20px;
+		border-radius: 10px;
+		font-family: $waterfall;
+		font-size: 65px;
+		color: $text;
+		filter: drop-shadow($drop-shadow);
+		&:hover {
+			color: $background-dark;
+			transition: 300ms;
+		}
+	}
 }

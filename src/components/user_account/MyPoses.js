@@ -16,8 +16,9 @@ const MyPoses = ({ userId, currentUser }) => {
 		axios
 			.get(endpoint)
 			.then((response) => {
-				const myPosesArray = response.data;
-				const myPosePictures = myPosesArray.map((pose) => [
+				const myFavouritesArray = response.data;
+				console.log(myFavouritesArray);
+				const myFavouritesPictures = myFavouritesArray.map((pose) => [
 					pose.pose_id,
 					pose.url_png,
 					pose.pose_name,
@@ -25,7 +26,7 @@ const MyPoses = ({ userId, currentUser }) => {
 					pose.pose_benefits,
 					pose.pose_description,
 				]);
-				setPoses(myPosePictures);
+				setPoses(myFavouritesPictures);
 			})
 			.catch(() =>
 				setAlertMessage(
@@ -43,16 +44,21 @@ const MyPoses = ({ userId, currentUser }) => {
 	}
 
 	return (
-		<div className="poses__library">
-			<div className="poses__container">
+		<div className="my-favourites__container">
+			<div className="my-favourites__title">
+				<h2 className="title-text">My Favourite Poses</h2>
+			</div>
+			<div className="my-poses__container">
 				{poses.map((pose, index) => (
-					<div className="grid-item" key={index} onClick={() => {}}>
+					<div className="my-poses__grid-item" key={index} onClick={() => {}}>
 						<FavouriteButton
+							className="my-poses__grid-item--button"
 							currentUser={currentUser}
 							userId={userId}
 							poseId={pose[0]}
 						/>
 						<PosePreview
+							className="my-poses__grid-item--pose"
 							currentUser={currentUser}
 							poseId={pose[0]}
 							userId={userId}

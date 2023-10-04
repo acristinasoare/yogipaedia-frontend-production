@@ -7,7 +7,7 @@ const TopNavBar = ({ userId, currentUser }) => {
 		<nav className="navbar-container">
 			<div className="navbar-left">
 				<Link to="/home">
-					<img src="Logo.png" alt="yogipedia-logo" />
+					<img src="Logo.png" alt="yogipaedia-logo" />
 				</Link>
 			</div>
 			<div className="navbar-right">

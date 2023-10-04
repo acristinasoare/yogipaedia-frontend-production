@@ -1,31 +1,13 @@
 @import "../../variables/variables.scss";
 
-.grid-item {
-	background-color: $background-dark;
-	filter: drop-shadow($drop-shadow);
-	border-radius: 10px;
-	height: fit-content;
-}
-
 .pose-preview__container {
 	position: relative;
-}
-
-.pose-preview__pose-button {
-	border: 0;
-}
-
-.pose-preview__favourite-button {
-	position: absolute;
-	border: 0;
-	right: 0px;
-	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	max-height: 150px;
+	// width: auto;
 }
 
 .pose-preview__english-name {
 	font-size: 10px;
-}
-
-.pose-preview__sanskrit-name {
-	font-size: 12px;
 }
