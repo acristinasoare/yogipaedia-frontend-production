@@ -106,7 +106,7 @@ const PoseOfTheDay = ({ userId }) => {
 		);
 	}
 	return (
-		<div className="page-content__container">
+		<div className="pose-of-the-day__container">
 			<div className="pose__container">
 				<div className="pose-of-the-day">
 					<h2>Pose Of The Day</h2>
