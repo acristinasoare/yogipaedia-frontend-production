@@ -16,8 +16,16 @@ const MyPoses = ({ userId, currentUser }) => {
 		axios
 			.get(endpoint)
 			.then((response) => {
-				const myFavouritesArray = response.data;
-				setPoses(myFavouritesArray);
+				const myPosesArray = response.data;
+				const myPosePictures = myPosesArray.map((pose) => [
+					pose.pose_id,
+					pose.url_png,
+					pose.pose_name,
+					pose.sanskrit_name,
+					pose.pose_benefits,
+					pose.pose_description,
+				]);
+				setPoses(myPosePictures);
 			})
 			.catch(() =>
 				setAlertMessage(
@@ -40,20 +48,20 @@ const MyPoses = ({ userId, currentUser }) => {
 				{poses.map((pose, index) => (
 					<div className="grid-item" key={index} onClick={() => {}}>
 						<FavouriteButton
-							userId={userId}
-							poseId={pose.pose_id}
 							currentUser={currentUser}
+							userId={userId}
+							poseId={pose[0]}
 						/>
 						<PosePreview
-							poseId={pose.pose_id}
-							userId={userId}
 							currentUser={currentUser}
-							poseImage={pose.url_png}
-							englishName={pose.pose_name}
-							sanskritName={pose.sanskrit_name}
-							poseBenefits={pose.pose_benefits}
-							poseDescription={pose.pose_description}
-							poseLevel={pose.level}
+							poseId={pose[0]}
+							userId={userId}
+							poseImage={pose[1]}
+							englishName={pose[2]}
+							sanskritName={pose[3]}
+							poseBenefits={pose[4]}
+							poseDescription={pose[5]}
+							poseLevel={pose[6]}
 						/>
 					</div>
 				))}
