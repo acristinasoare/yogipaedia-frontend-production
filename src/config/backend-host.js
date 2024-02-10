@@ -1,3 +1,3 @@
-const backendHost = "http://localhost:4000";
+const backendHost = "https://yogipaediaapp.onrender.com";
 
 export default backendHost;
