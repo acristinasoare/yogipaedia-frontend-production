@@ -15,6 +15,8 @@ const NavMenu = ({ userId, currentUser }) => {
 
   const handleLogOut = () => {
     logOut();
+    localStorage.removeItem("currentUser");
+    localStorage.removeItem("userId");
     navigate("/");
   };
 

@@ -11,6 +11,7 @@ const LogOut = () => {
       await logOut();
       navigate("/");
       localStorage.removeItem("currentUser");
+      localStorage.removeItem("userId");
     } catch (error) {
       console.log(error.message);
     }

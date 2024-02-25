@@ -34,10 +34,10 @@ const LoginModal = ({ setUserId, setCurrentUser }) => {
     try {
       await googleSignIn();
       navigate("/home");
-      localStorage.setItem("currentUser", auth.currentUser.uid);
+      localStorage.setItem("currentUser", auth.currentUser);
       setCurrentUser(localStorage.getItem("currentUser"));
-
       setUserId(auth.currentUser.uid);
+      localStorage.setItem("userId", auth.currentUser.uid);
     } catch (error) {
       console.log(error.message);
     }
@@ -46,7 +46,6 @@ const LoginModal = ({ setUserId, setCurrentUser }) => {
   useEffect(() => {
     const loggedInUser = localStorage.getItem("currentUser");
     if (loggedInUser) {
-      setCurrentUser(loggedInUser);
       navigate("/home");
     }
   }, []);

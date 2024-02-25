@@ -12,63 +12,65 @@ import MyFavourites from "../user_account/MyFavourites";
 import "../../styles/app_static_sass/app.scss";
 
 const App = () => {
-	const [userId, setUserId] = useState("");
-	const [currentUser, setCurrentUser] = useState("");
+  const [userId, setUserId] = useState(localStorage.getItem("userId"));
+  const [currentUser, setCurrentUser] = useState(
+    localStorage.getItem("currentUser")
+  );
 
-	return (
-		<>
-			<UserAuthContextProvider>
-				<Routes>
-					<Route
-						path="/"
-						element={
-							<LoginModal
-								userId={userId}
-								setUserId={setUserId}
-								currentUser={currentUser}
-								setCurrentUser={setCurrentUser}
-							/>
-						}
-					/>
-					<Route
-						path="/signup"
-						element={
-							<SignUp
-								userId={userId}
-								setUserId={setUserId}
-								currentUser={currentUser}
-								setCurrentUser={setCurrentUser}
-							/>
-						}
-					/>
-					<Route
-						path="/home"
-						element={
-							<ProtectedRoute>
-								<Home userId={userId} currentUser={currentUser} />
-							</ProtectedRoute>
-						}
-					/>
-					<Route
-						path="/poses-library"
-						element={
-							<ProtectedRoute>
-								<PosesLibrary userId={userId} currentUser={currentUser} />
-							</ProtectedRoute>
-						}
-					/>
-					<Route
-						path="/my-favourites"
-						element={
-							<ProtectedRoute>
-								<MyFavourites userId={userId} currentUser={currentUser} />
-							</ProtectedRoute>
-						}
-					/>
-				</Routes>
-			</UserAuthContextProvider>
-		</>
-	);
+  return (
+    <>
+      <UserAuthContextProvider>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <LoginModal
+                userId={userId}
+                setUserId={setUserId}
+                currentUser={currentUser}
+                setCurrentUser={setCurrentUser}
+              />
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              <SignUp
+                userId={userId}
+                setUserId={setUserId}
+                currentUser={currentUser}
+                setCurrentUser={setCurrentUser}
+              />
+            }
+          />
+          <Route
+            path="/home"
+            element={
+              <ProtectedRoute>
+                <Home userId={userId} currentUser={currentUser} />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/poses-library"
+            element={
+              <ProtectedRoute>
+                <PosesLibrary userId={userId} currentUser={currentUser} />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/my-favourites"
+            element={
+              <ProtectedRoute>
+                <MyFavourites userId={userId} currentUser={currentUser} />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </UserAuthContextProvider>
+    </>
+  );
 };
 
 export default App;
