@@ -44,13 +44,12 @@ const LoginModal = ({ setUserId, setCurrentUser }) => {
   };
 
   useEffect(() => {
-    if (
-      localStorage.hasOwnProperty("currentUser") &&
-      localStorage.currentUser !== ""
-    ) {
+    const loggedInUser = localStorage.getItem("currentUser");
+    if (loggedInUser) {
+      setCurrentUser(loggedInUser);
       navigate("/home");
     }
-  });
+  }, []);
 
   return (
     <>

@@ -48,38 +48,6 @@ const PoseOfTheDay = ({ userId }) => {
     }
   }, []);
 
-  // 			.then((response) => {
-  // 				console.log(response);
-  // 				console.log(response.data);
-  // 				const yogaPosesArray = response.data;
-  // 				console.log(yogaPosesArray);
-  // 				const randomIndex = Math.floor(Math.random() * yogaPosesArray.length);
-  // 				const randomPose = yogaPosesArray[randomIndex];
-  // 				const randomImageUrl = randomPose.url_png;
-  // 				const randomName = randomPose.pose_name;
-
-  // 				console.log(randomPose);
-  // 				console.log(randomImageUrl);
-  // 				console.log(randomName);
-
-  // 				setRandomImage(randomImageUrl);
-  // 				setPoseName(randomName);
-
-  // 				localStorage.setItem("lastGeneratedDate", currentDate);
-  // 				localStorage.setItem("lastGeneratedPictureUrl", randomImageUrl);
-  // 				localStorage.setItem("lastGeneratedName", randomName);
-  // 			})
-  // 			.catch(() =>
-  // 				setAlertMessage("Server error. Pose of the day data unavailable.")
-  // 			);
-  // 	} else {
-  // 		const storedPictureUrl = localStorage.getItem("lastGeneratedPictureUrl");
-  // 		const storedName = localStorage.getItem("lastGeneratedName");
-  // 		setRandomImage(storedPictureUrl);
-  // 		setPoseName(storedName);
-  // 	}
-  // }, []);
-
   if (alertMessage) {
     return (
       <div className="pose-of-the-day__container">
